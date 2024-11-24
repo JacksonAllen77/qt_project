@@ -421,6 +421,12 @@
 		<Unit filename="/home/ro/boat_test/src/boat_test/src/mapchannel.ui">
 			<Option target="boat_test"/>
 		</Unit>
+		<Unit filename="/home/ro/boat_test/src/boat_test/src/passid.cpp">
+			<Option target="boat_test"/>
+		</Unit>
+		<Unit filename="/home/ro/boat_test/src/boat_test/src/passid.h">
+			<Option target="boat_test"/>
+		</Unit>
 		<Unit filename="/home/ro/boat_test/src/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

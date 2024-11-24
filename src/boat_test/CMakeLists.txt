@@ -18,7 +18,7 @@ find_package(catkin REQUIRED COMPONENTS
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
-find_package(Qt5 REQUIRED Core Gui Widgets WebEngine WebEngineCore WebEngineWidgets)
+find_package(Qt5 REQUIRED Core Gui Widgets WebEngine WebEngineCore WebEngineWidgets WebChannel)
 
 
 set(CMAKE_AUTOMOC ON)
@@ -30,6 +30,13 @@ set(SOURCES
     src/main.cpp
     src/mapchannel.cpp
     src/connectchannel.cpp
+    src/passid.cpp
+)
+# 添加头文件
+set(HEADERS
+    mapchannel.h
+
+
 )
 
 set(FORMS
@@ -158,7 +165,8 @@ target_link_libraries(${PROJECT_NAME}
   Qt5::Core
   Qt5::Gui
   Qt5::Widgets
-  Qt5::WebEngineWidgets)  # 确保链接 Qt5::WebEngineWidgets
+  Qt5::WebEngineWidgets
+  Qt5::WebChannel)
 
 
 

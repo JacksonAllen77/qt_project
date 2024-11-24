@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_mapchannel_t {
-    QByteArrayData data[3];
-    char stringdata0[34];
+    QByteArrayData data[8];
+    char stringdata0[86];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -33,10 +33,17 @@ static const qt_meta_stringdata_mapchannel_t qt_meta_stringdata_mapchannel = {
     {
 QT_MOC_LITERAL(0, 0, 10), // "mapchannel"
 QT_MOC_LITERAL(1, 11, 21), // "on_pushButton_clicked"
-QT_MOC_LITERAL(2, 33, 0) // ""
+QT_MOC_LITERAL(2, 33, 0), // ""
+QT_MOC_LITERAL(3, 34, 16), // "onBoatPosUpdated"
+QT_MOC_LITERAL(4, 51, 3), // "lng"
+QT_MOC_LITERAL(5, 55, 3), // "lat"
+QT_MOC_LITERAL(6, 59, 6), // "course"
+QT_MOC_LITERAL(7, 66, 19) // "onClearTrackClicked"
 
     },
-    "mapchannel\0on_pushButton_clicked\0"
+    "mapchannel\0on_pushButton_clicked\0\0"
+    "onBoatPosUpdated\0lng\0lat\0course\0"
+    "onClearTrackClicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -46,7 +53,7 @@ static const uint qt_meta_data_mapchannel[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       3,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -54,9 +61,13 @@ static const uint qt_meta_data_mapchannel[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   19,    2, 0x08 /* Private */,
+       1,    0,   29,    2, 0x08 /* Private */,
+       3,    3,   30,    2, 0x08 /* Private */,
+       7,    0,   37,    2, 0x08 /* Private */,
 
  // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Double, QMetaType::Double, QMetaType::Double,    4,    5,    6,
     QMetaType::Void,
 
        0        // eod
@@ -69,10 +80,11 @@ void mapchannel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->on_pushButton_clicked(); break;
+        case 1: _t->onBoatPosUpdated((*reinterpret_cast< double(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2])),(*reinterpret_cast< double(*)>(_a[3]))); break;
+        case 2: _t->onClearTrackClicked(); break;
         default: ;
         }
     }
-    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject mapchannel::staticMetaObject = { {
@@ -104,13 +116,13 @@ int mapchannel::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 3)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 3;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 3)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 1;
+        _id -= 3;
     }
     return _id;
 }

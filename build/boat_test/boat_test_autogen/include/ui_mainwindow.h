@@ -30,7 +30,6 @@ public:
     QWidget *centralwidget;
     QFrame *line;
     QWebEngineView *widget;
-    QWebEngineView *widget_2;
     QLabel *label;
     QWidget *horizontalLayoutWidget;
     QHBoxLayout *horizontalLayout;
@@ -58,9 +57,6 @@ public:
         widget = new QWebEngineView(centralwidget);
         widget->setObjectName(QString::fromUtf8("widget"));
         widget->setGeometry(QRect(-10, 60, 811, 511));
-        widget_2 = new QWebEngineView(widget);
-        widget_2->setObjectName(QString::fromUtf8("widget_2"));
-        widget_2->setGeometry(QRect(430, 260, 811, 511));
         label = new QLabel(centralwidget);
         label->setObjectName(QString::fromUtf8("label"));
         label->setGeometry(QRect(40, 10, 211, 41));

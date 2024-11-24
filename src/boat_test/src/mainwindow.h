@@ -16,18 +16,15 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-signals:
-    void mapChannelClosed();
 
 private slots:
     void on_pushButton_clicked();
-
     void on_pushButton_2_clicked();
 
 private:
     Ui::MainWindow *ui;
     mapchannel *m;//定义mapchannel窗体
-    connectchannel *m1;
+    connectchannel *m1;// connectchannel窗口指针
 };
 
 #endif // MAINWINDOW_H

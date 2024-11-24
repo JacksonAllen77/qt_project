@@ -9,6 +9,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/boat_test.dir/src/main.cpp.o"
   "CMakeFiles/boat_test.dir/src/mainwindow.cpp.o"
   "CMakeFiles/boat_test.dir/src/mapchannel.cpp.o"
+  "CMakeFiles/boat_test.dir/src/passid.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

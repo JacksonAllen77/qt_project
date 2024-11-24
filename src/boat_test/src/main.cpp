@@ -1,13 +1,13 @@
-#include <ros/ros.h>
 #include <QApplication>
-#include "mainwindow.h"
-
+#include "mainwindow.h"  // 引入 MainWindow 头文件
 
 int main(int argc, char **argv)
 {
-    QApplication a(argc, argv);  // 初始化 QApplication，传递 argc 和 argv
-    MainWindow w(nullptr);       // 只传递 QWidget* 类型的参数，指明没有父窗口
-    w.show();                    // 显示窗口
+    QApplication app(argc, argv);
 
-    return a.exec();             // 启动 Qt 应用程序事件循环
+    // 创建 MainWindow 对象并显示
+    MainWindow mainWindow;
+    mainWindow.show();
+
+    return app.exec();
 }

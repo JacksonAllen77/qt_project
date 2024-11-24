@@ -21,6 +21,11 @@
 			"/home/ro/boat_test/src/boat_test/src/mapchannel.h",
 			"MU",
 			"UVLADIE3JM/moc_mapchannel.cpp"
+		],
+		[
+			"/home/ro/boat_test/src/boat_test/src/passid.h",
+			"MU",
+			"UVLADIE3JM/moc_passid.cpp"
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -104,7 +109,8 @@
 		[ "/home/ro/boat_test/src/boat_test/src/connectchannel.cpp", "MU" ],
 		[ "/home/ro/boat_test/src/boat_test/src/main.cpp", "MU" ],
 		[ "/home/ro/boat_test/src/boat_test/src/mainwindow.cpp", "MU" ],
-		[ "/home/ro/boat_test/src/boat_test/src/mapchannel.cpp", "MU" ]
+		[ "/home/ro/boat_test/src/boat_test/src/mapchannel.cpp", "MU" ],
+		[ "/home/ro/boat_test/src/boat_test/src/passid.cpp", "MU" ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
