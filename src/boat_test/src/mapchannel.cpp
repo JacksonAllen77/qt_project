@@ -1,6 +1,6 @@
 #include "mapchannel.h"
 #include "ui_mapchannel.h"
-#include "passid.h"  // 确保包含 PassId 的完整定义
+#include "passid.h"
 #include <QTimer>
 #include <QDebug>
 #include <ros/ros.h>
@@ -47,30 +47,27 @@ void mapchannel::boatPositionCallback(const geometry_msgs::Pose2D::ConstPtr& msg
     // 更新经度和纬度到 QLineEdit
     ui->lineEdit->setText(QString::number(msg->x, 'f', 6));  // 经度
     ui->lineEdit_2->setText(QString::number(msg->y, 'f', 6));  // 纬度
-    ui->lineEdit_3->setText(QString::number(msg->theta, 'f', 2));  // 艏向（角度）
+    ui->lineEdit_4->setText(QString::number(msg->theta, 'f', 2));  // 艏向（角度）
 
-    // 调用 onBoatPosUpdated 函数并传递经度、纬度、艏向
-    onBoatPosUpdated(msg->x, msg->y, msg->theta);  // 将数据传递给 onBoatPosUpdated
+    // 调用 onBoatPosUpdated 更新地图
+    onBoatPosUpdated(msg->y, msg->x, msg->theta);  // 纬度、经度、航向
+
 }
-
-void mapchannel::onBoatPosUpdated(double latitude, double longitude, double theta)
-{
-    // 更新 UI 或执行其他操作
-    ui->lineEdit->setText(QString::number(latitude, 'f', 6));
-    ui->lineEdit_2->setText(QString::number(longitude, 'f', 6));
-    ui->lineEdit_4->setText(QString::number(theta, 'f', 2));
-
-    // 将接收到的数据传递到 JavaScript 进行地图更新
-    QString script = QString("showBoatPosition(%1, %2, %3);").arg(latitude).arg(longitude).arg(theta);  // 使用传入的参数
-    webEngineView->page()->runJavaScript(script);  // 执行 JavaScript 更新地图
-}
-
-
 
 void mapchannel::boatSpeedCallback(const std_msgs::Float32::ConstPtr& msg)
 {
     // 更新航速到 QLineEdit
     ui->lineEdit_3->setText(QString::number(msg->data, 'f', 2));  // 航速
+}
+void mapchannel::onBoatPosUpdated(double latitude, double longitude, double theta)
+{
+    qDebug() << "Updating boat position:" << latitude << longitude << theta;
+    // 调用 JavaScript 的 showBoatPosition 函数，并传递经纬度和角度
+    QString script = QString("showBoatPosition(%1, %2, %3);")
+                         .arg(longitude)
+                         .arg(latitude)
+                         .arg(theta);
+    webEngineView->page()->runJavaScript(script);
 }
 
 void mapchannel::on_pushButton_clicked()

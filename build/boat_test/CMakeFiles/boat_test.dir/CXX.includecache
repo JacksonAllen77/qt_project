@@ -37,6 +37,8 @@ geometry_msgs/Pose2D.h
 -
 std_msgs/Float32.h
 -
+passid.h
+/home/ro/boat_test/src/boat_test/src/passid.h
 
 /home/ro/boat_test/src/boat_test/src/passid.h
 QObject
