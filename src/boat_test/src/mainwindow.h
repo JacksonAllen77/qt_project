@@ -2,15 +2,14 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include "mapchannel.h"//添加mapchannel窗体头文件
-#include "connectchannel.h"
+#include "mapchannel.h" // 地图交互窗口
+#include "connectchannel.h" // 连接窗口（此处假设存在）
 
 namespace Ui {
 class MainWindow;
 }
 
-class MainWindow : public QMainWindow
-{
+class MainWindow : public QMainWindow {
     Q_OBJECT
 
 public:
@@ -18,13 +17,13 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_clicked();
-    void on_pushButton_2_clicked();
+    void on_pushButton_clicked();  // 打开地图窗口
+    void on_pushButton_2_clicked(); // 打开连接窗口
 
 private:
     Ui::MainWindow *ui;
-    mapchannel *m;//定义mapchannel窗体
-    connectchannel *m1;// connectchannel窗口指针
+    mapchannel *m; // 地图窗口
+    connectchannel *m1; // 连接窗口
 };
 
 #endif // MAINWINDOW_H

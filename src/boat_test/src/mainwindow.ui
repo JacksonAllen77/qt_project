@@ -74,16 +74,16 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="pushButton_3">
        <property name="text">
-        <string>通讯界面</string>
+        <string>路径规划界面</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="pushButton_2">
        <property name="text">
-        <string>界面</string>
+        <string>通讯界面</string>
        </property>
       </widget>
      </item>

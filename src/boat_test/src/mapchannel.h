@@ -2,14 +2,17 @@
 #define MAPCHANNEL_H
 
 #include <QMainWindow>
-#include <QWebEngineView>
 #include <QWebChannel>
-#include <QPushButton>
-#include "passid.h"
+#include <QWebEngineView>
+#include <ros/ros.h>
+#include <geometry_msgs/Pose2D.h>
+#include <std_msgs/Float32.h>
 
 namespace Ui {
 class mapchannel;
 }
+
+class PassId;  // 前向声明 PassId 类
 
 class mapchannel : public QMainWindow
 {
@@ -20,15 +23,29 @@ public:
     ~mapchannel();
 
 private slots:
-    void on_pushButton_clicked();
-    void onBoatPosUpdated(double lng, double lat, double course);  // 新增槽函数
-    void onClearTrackClicked();  // 新增槽函数
+    void on_pushButton_clicked();      // 返回主界面
+    void onClearTrackClicked();       // 清除轨迹数据
+    void onRosSpinOnce();             // 定时器回调函数
 
 private:
     Ui::mapchannel *ui;
-    QWebEngineView *webEngineView;  // QWebEngineView 对象
-    QWebChannel *channel;          // QWebChannel 对象
-    PassId *passId;  // PassId 对象
+
+    // ROS 相关
+    ros::NodeHandle nh;               // NodeHandle 作为类成员
+    ros::Subscriber position_sub;     // 订阅 /boat_position
+    ros::Subscriber speed_sub;        // 订阅 /boat_speed
+
+    // 回调函数
+    void boatPositionCallback(const geometry_msgs::Pose2D::ConstPtr& msg);
+    void boatSpeedCallback(const std_msgs::Float32::ConstPtr& msg);
+
+    // 地图更新函数
+    void onBoatPosUpdated(double latitude, double longitude, double theta);
+
+    // WebEngineView 相关
+    QWebEngineView *webEngineView;    // 用于显示地图的 WebEngineView
+    QWebChannel *channel;             // WebChannel 用于传递数据到前端
+    PassId *passId;                   // 假设 PassId 是你自定义的类
 };
 
 #endif // MAPCHANNEL_H

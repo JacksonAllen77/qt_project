@@ -34,8 +34,8 @@ public:
     QWidget *horizontalLayoutWidget;
     QHBoxLayout *horizontalLayout;
     QPushButton *pushButton;
-    QPushButton *pushButton_2;
     QPushButton *pushButton_3;
+    QPushButton *pushButton_2;
     QPushButton *pushButton_4;
     QPushButton *pushButton_5;
     QSpacerItem *horizontalSpacer;
@@ -75,15 +75,15 @@ public:
 
         horizontalLayout->addWidget(pushButton);
 
-        pushButton_2 = new QPushButton(horizontalLayoutWidget);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-
-        horizontalLayout->addWidget(pushButton_2);
-
         pushButton_3 = new QPushButton(horizontalLayoutWidget);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
 
         horizontalLayout->addWidget(pushButton_3);
+
+        pushButton_2 = new QPushButton(horizontalLayoutWidget);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+
+        horizontalLayout->addWidget(pushButton_2);
 
         pushButton_4 = new QPushButton(horizontalLayoutWidget);
         pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
@@ -118,8 +118,8 @@ public:
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "MainWindow", nullptr));
         label->setText(QApplication::translate("MainWindow", "\344\270\273\350\260\203\350\257\225\347\225\214\351\235\242", nullptr));
         pushButton->setText(QApplication::translate("MainWindow", "\345\234\260\345\233\276\345\257\274\350\210\252\347\225\214\351\235\242", nullptr));
+        pushButton_3->setText(QApplication::translate("MainWindow", "\350\267\257\345\276\204\350\247\204\345\210\222\347\225\214\351\235\242", nullptr));
         pushButton_2->setText(QApplication::translate("MainWindow", "\351\200\232\350\256\257\347\225\214\351\235\242", nullptr));
-        pushButton_3->setText(QApplication::translate("MainWindow", "\347\225\214\351\235\242", nullptr));
         pushButton_4->setText(QApplication::translate("MainWindow", "\347\225\214\351\235\242", nullptr));
         pushButton_5->setText(QApplication::translate("MainWindow", "\346\227\240\344\272\272\350\211\207\347\225\214\351\235\242", nullptr));
     } // retranslateUi

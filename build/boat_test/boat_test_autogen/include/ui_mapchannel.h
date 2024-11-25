@@ -51,7 +51,7 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         widget = new QWebEngineView(centralwidget);
         widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(-10, 80, 811, 491));
+        widget->setGeometry(QRect(-10, 50, 811, 521));
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(705, 10, 89, 25));

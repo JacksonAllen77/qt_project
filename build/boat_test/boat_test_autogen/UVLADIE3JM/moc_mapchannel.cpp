@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_mapchannel_t {
-    QByteArrayData data[8];
-    char stringdata0[86];
+    QByteArrayData data[5];
+    char stringdata0[68];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -34,16 +34,12 @@ static const qt_meta_stringdata_mapchannel_t qt_meta_stringdata_mapchannel = {
 QT_MOC_LITERAL(0, 0, 10), // "mapchannel"
 QT_MOC_LITERAL(1, 11, 21), // "on_pushButton_clicked"
 QT_MOC_LITERAL(2, 33, 0), // ""
-QT_MOC_LITERAL(3, 34, 16), // "onBoatPosUpdated"
-QT_MOC_LITERAL(4, 51, 3), // "lng"
-QT_MOC_LITERAL(5, 55, 3), // "lat"
-QT_MOC_LITERAL(6, 59, 6), // "course"
-QT_MOC_LITERAL(7, 66, 19) // "onClearTrackClicked"
+QT_MOC_LITERAL(3, 34, 19), // "onClearTrackClicked"
+QT_MOC_LITERAL(4, 54, 13) // "onRosSpinOnce"
 
     },
     "mapchannel\0on_pushButton_clicked\0\0"
-    "onBoatPosUpdated\0lng\0lat\0course\0"
-    "onClearTrackClicked"
+    "onClearTrackClicked\0onRosSpinOnce"
 };
 #undef QT_MOC_LITERAL
 
@@ -62,12 +58,12 @@ static const uint qt_meta_data_mapchannel[] = {
 
  // slots: name, argc, parameters, tag, flags
        1,    0,   29,    2, 0x08 /* Private */,
-       3,    3,   30,    2, 0x08 /* Private */,
-       7,    0,   37,    2, 0x08 /* Private */,
+       3,    0,   30,    2, 0x08 /* Private */,
+       4,    0,   31,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Double, QMetaType::Double, QMetaType::Double,    4,    5,    6,
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -80,11 +76,12 @@ void mapchannel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->on_pushButton_clicked(); break;
-        case 1: _t->onBoatPosUpdated((*reinterpret_cast< double(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2])),(*reinterpret_cast< double(*)>(_a[3]))); break;
-        case 2: _t->onClearTrackClicked(); break;
+        case 1: _t->onClearTrackClicked(); break;
+        case 2: _t->onRosSpinOnce(); break;
         default: ;
         }
     }
+    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject mapchannel::staticMetaObject = { {
