@@ -734,6 +734,33 @@ src/passid.cpp.s:
 	cd /home/ro/boat_test/build && $(MAKE) -f boat_test/CMakeFiles/boat_test.dir/build.make boat_test/CMakeFiles/boat_test.dir/src/passid.cpp.s
 .PHONY : src/passid.cpp.s
 
+src/pathchannel.o: src/pathchannel.cpp.o
+
+.PHONY : src/pathchannel.o
+
+# target to build an object file
+src/pathchannel.cpp.o:
+	cd /home/ro/boat_test/build && $(MAKE) -f boat_test/CMakeFiles/boat_test.dir/build.make boat_test/CMakeFiles/boat_test.dir/src/pathchannel.cpp.o
+.PHONY : src/pathchannel.cpp.o
+
+src/pathchannel.i: src/pathchannel.cpp.i
+
+.PHONY : src/pathchannel.i
+
+# target to preprocess a source file
+src/pathchannel.cpp.i:
+	cd /home/ro/boat_test/build && $(MAKE) -f boat_test/CMakeFiles/boat_test.dir/build.make boat_test/CMakeFiles/boat_test.dir/src/pathchannel.cpp.i
+.PHONY : src/pathchannel.cpp.i
+
+src/pathchannel.s: src/pathchannel.cpp.s
+
+.PHONY : src/pathchannel.s
+
+# target to generate assembly for a file
+src/pathchannel.cpp.s:
+	cd /home/ro/boat_test/build && $(MAKE) -f boat_test/CMakeFiles/boat_test.dir/build.make boat_test/CMakeFiles/boat_test.dir/src/pathchannel.cpp.s
+.PHONY : src/pathchannel.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -792,6 +819,9 @@ help:
 	@echo "... src/passid.o"
 	@echo "... src/passid.i"
 	@echo "... src/passid.s"
+	@echo "... src/pathchannel.o"
+	@echo "... src/pathchannel.i"
+	@echo "... src/pathchannel.s"
 .PHONY : help
 
 

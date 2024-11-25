@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/ro/boat_test/src/boat_test/src/mainwindow.cpp" "/home/ro/boat_test/build/boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o"
   "/home/ro/boat_test/src/boat_test/src/mapchannel.cpp" "/home/ro/boat_test/build/boat_test/CMakeFiles/boat_test.dir/src/mapchannel.cpp.o"
   "/home/ro/boat_test/src/boat_test/src/passid.cpp" "/home/ro/boat_test/build/boat_test/CMakeFiles/boat_test.dir/src/passid.cpp.o"
+  "/home/ro/boat_test/src/boat_test/src/pathchannel.cpp" "/home/ro/boat_test/build/boat_test/CMakeFiles/boat_test.dir/src/pathchannel.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

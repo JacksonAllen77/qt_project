@@ -6,11 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/ro/boat_test/src/boat_test/src/mapchannel.cpp
-mapchannel.h
-/home/ro/boat_test/src/boat_test/src/mapchannel.h
-ui_mapchannel.h
-/home/ro/boat_test/src/boat_test/src/ui_mapchannel.h
+/home/ro/boat_test/src/boat_test/src/passid.h
+QObject
+-
+
+/home/ro/boat_test/src/boat_test/src/pathchannel.cpp
+pathchannel.h
+/home/ro/boat_test/src/boat_test/src/pathchannel.h
+ui_pathchannel.h
+/home/ro/boat_test/src/boat_test/src/ui_pathchannel.h
 passid.h
 /home/ro/boat_test/src/boat_test/src/passid.h
 QTimer
@@ -24,7 +28,7 @@ geometry_msgs/Pose2D.h
 std_msgs/Float32.h
 -
 
-/home/ro/boat_test/src/boat_test/src/mapchannel.h
+/home/ro/boat_test/src/boat_test/src/pathchannel.h
 QMainWindow
 -
 QWebChannel
@@ -39,10 +43,6 @@ std_msgs/Float32.h
 -
 passid.h
 /home/ro/boat_test/src/boat_test/src/passid.h
-
-/home/ro/boat_test/src/boat_test/src/passid.h
-QObject
--
 
 /opt/ros/noetic/include/geometry_msgs/Pose2D.h
 string
@@ -2402,7 +2402,7 @@ QtGui/qkeysequence.h
 QtGui/qevent.h
 -
 
-boat_test/boat_test_autogen/include/ui_mapchannel.h
+boat_test/boat_test_autogen/include/ui_pathchannel.h
 QtCore/QVariant
 -
 QtWidgets/QApplication

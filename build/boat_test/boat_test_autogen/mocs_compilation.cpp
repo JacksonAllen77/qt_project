@@ -3,3 +3,4 @@
 #include "UVLADIE3JM/moc_mainwindow.cpp"
 #include "UVLADIE3JM/moc_mapchannel.cpp"
 #include "UVLADIE3JM/moc_passid.cpp"
+#include "UVLADIE3JM/moc_pathchannel.cpp"
