@@ -39,6 +39,9 @@ public:
     QLineEdit *lineEdit_4;
     QLabel *label_4;
     QFrame *line_4;
+    QPushButton *pushButton_2;
+    QPushButton *pushButton_3;
+    QPushButton *pushButton_4;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -51,7 +54,7 @@ public:
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         widget = new QWebEngineView(centralwidget);
         widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(-10, 50, 811, 521));
+        widget->setGeometry(QRect(-10, 80, 811, 491));
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(705, 10, 89, 25));
@@ -86,9 +89,18 @@ public:
         label_4->setGeometry(QRect(350, 10, 41, 17));
         line_4 = new QFrame(centralwidget);
         line_4->setObjectName(QString::fromUtf8("line_4"));
-        line_4->setGeometry(QRect(0, 40, 801, 16));
+        line_4->setGeometry(QRect(-10, 70, 821, 20));
         line_4->setFrameShape(QFrame::HLine);
         line_4->setFrameShadow(QFrame::Sunken);
+        pushButton_2 = new QPushButton(centralwidget);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pushButton_2->setGeometry(QRect(50, 45, 89, 25));
+        pushButton_3 = new QPushButton(centralwidget);
+        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+        pushButton_3->setGeometry(QRect(220, 45, 89, 25));
+        pushButton_4 = new QPushButton(centralwidget);
+        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+        pushButton_4->setGeometry(QRect(400, 45, 89, 25));
         mapchannel->setCentralWidget(centralwidget);
         menubar = new QMenuBar(mapchannel);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -113,6 +125,9 @@ public:
         label_3->setText(QApplication::translate("mapchannel", "\350\210\252\351\200\237:", nullptr));
         lineEdit_4->setText(QString());
         label_4->setText(QApplication::translate("mapchannel", "\350\211\217\345\220\221:", nullptr));
+        pushButton_2->setText(QApplication::translate("mapchannel", "\346\270\205\351\231\244\350\275\250\350\277\271", nullptr));
+        pushButton_3->setText(QApplication::translate("mapchannel", "\344\277\235\345\255\230\350\275\250\350\277\271", nullptr));
+        pushButton_4->setText(QApplication::translate("mapchannel", "\345\233\236\346\224\276", nullptr));
     } // retranslateUi
 
 };

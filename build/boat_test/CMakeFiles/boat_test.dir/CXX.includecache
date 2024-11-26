@@ -100,6 +100,24 @@ pathchannel.h
 boatchannel.h
 /home/ro/boat_test/src/boat_test/src/boatchannel.h
 
+/home/ro/boat_test/src/boat_test/src/mapchannel.cpp
+mapchannel.h
+/home/ro/boat_test/src/boat_test/src/mapchannel.h
+ui_mapchannel.h
+/home/ro/boat_test/src/boat_test/src/ui_mapchannel.h
+passid.h
+/home/ro/boat_test/src/boat_test/src/passid.h
+QTimer
+-
+QDebug
+-
+ros/ros.h
+-
+geometry_msgs/Pose2D.h
+-
+std_msgs/Float32.h
+-
+
 /home/ro/boat_test/src/boat_test/src/mapchannel.h
 QMainWindow
 -
@@ -832,6 +850,10 @@ vector
 time.h
 -
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug
+qdebug.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QFlags
 qflags.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h
@@ -855,6 +877,10 @@ qshareddata.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
 qstring.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer
+qtimer.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QUrl
 qurl.h
@@ -908,6 +934,12 @@ QtCore/qatomic_bootstrap.h
 QtCore/qatomic_cxx11.h
 -
 QtCore/qatomic_msvc.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h
+QtCore/qglobal.h
+-
+QtCore/qnamespace.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h
@@ -1488,6 +1520,16 @@ QtCore/qscopedpointer.h
 stdio.h
 -
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h
+QtCore/qglobal.h
+-
+QtCore/qbasictimer.h
+-
+QtCore/qobject.h
+-
+chrono
+-
+
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h
 QtCore/qglobal.h
 -
@@ -1922,6 +1964,36 @@ QtGui/qtguiglobal.h
 QtCore/qprocessordetection.h
 -
 
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qtextcursor.h
+QtGui/qtguiglobal.h
+-
+QtCore/qstring.h
+-
+QtCore/qshareddata.h
+-
+QtGui/qtextformat.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qtextformat.h
+QtGui/qtguiglobal.h
+-
+QtGui/qcolor.h
+-
+QtGui/qfont.h
+-
+QtCore/qshareddata.h
+-
+QtCore/qvector.h
+-
+QtCore/qvariant.h
+-
+QtGui/qpen.h
+-
+QtGui/qbrush.h
+-
+QtGui/qtextoption.h
+-
+
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h
 QtGui/qtguiglobal.h
 -
@@ -2246,6 +2318,10 @@ qboxlayout.h
 qlabel.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit
+qlineedit.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow
 qmainwindow.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h
@@ -2388,6 +2464,18 @@ QtCore/qrect.h
 limits.h
 -
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qframe.h
+-
+QtGui/qtextcursor.h
+-
+QtCore/qstring.h
+-
+QtCore/qmargins.h
+-
+
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h
 QtWidgets/qtwidgetsglobal.h
 -
@@ -2500,6 +2588,30 @@ QtWidgets/QMenuBar
 QtWidgets/QPushButton
 -
 QtWidgets/QSpacerItem
+-
+QtWidgets/QStatusBar
+-
+QtWidgets/QWidget
+-
+qwebengineview.h
+-
+
+boat_test/boat_test_autogen/include/ui_mapchannel.h
+QtCore/QVariant
+-
+QtWidgets/QApplication
+-
+QtWidgets/QFrame
+-
+QtWidgets/QLabel
+-
+QtWidgets/QLineEdit
+-
+QtWidgets/QMainWindow
+-
+QtWidgets/QMenuBar
+-
+QtWidgets/QPushButton
 -
 QtWidgets/QStatusBar
 -

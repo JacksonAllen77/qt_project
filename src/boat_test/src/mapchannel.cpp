@@ -75,17 +75,37 @@ void mapchannel::on_pushButton_clicked()
     this->parentWidget()->show();
     this->hide();
 }
-void mapchannel::onClearTrackClicked()
+
+void mapchannel::on_pushButton_2_clicked()
 {
-    // 清除跟踪数据
-    ui->lineEdit->clear();
-    ui->lineEdit_2->clear();
-    ui->lineEdit_3->clear();
-    ui->lineEdit_4->clear();
+    // 清除地图上的轨迹
+    clearMapTracks();
 }
 
-// 定时器回调函数，每100ms调用一次 ros::spinOnce()
+
+// 清除地图轨迹和标记
+void mapchannel::clearMapTracks()
+{
+    // 调用 JavaScript 的 clearTrack 函数
+    QString script = "clearTrack();";  // 假设前端实现了 clearTrack 函数
+    webEngineView->page()->runJavaScript(script);
+}
+
+// 清除船只标记
+void mapchannel::clearBoatMarker()
+{
+    // 调用 JavaScript 的 clearBoatMarker 函数
+    QString script = "clearBoatMarker();";  // 假设前端实现了 clearBoatMarker 函数
+    webEngineView->page()->runJavaScript(script);
+}
+
+
+// 实现 onRosSpinOnce() 函数
 void mapchannel::onRosSpinOnce()
 {
+    // 每次调用时处理 ROS 回调
     ros::spinOnce();
 }
+
+
+

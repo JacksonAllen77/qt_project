@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_mapchannel_t {
     QByteArrayData data[9];
-    char stringdata0[110];
+    char stringdata0[114];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -34,16 +34,16 @@ static const qt_meta_stringdata_mapchannel_t qt_meta_stringdata_mapchannel = {
 QT_MOC_LITERAL(0, 0, 10), // "mapchannel"
 QT_MOC_LITERAL(1, 11, 21), // "on_pushButton_clicked"
 QT_MOC_LITERAL(2, 33, 0), // ""
-QT_MOC_LITERAL(3, 34, 19), // "onClearTrackClicked"
-QT_MOC_LITERAL(4, 54, 13), // "onRosSpinOnce"
-QT_MOC_LITERAL(5, 68, 16), // "onBoatPosUpdated"
-QT_MOC_LITERAL(6, 85, 8), // "latitude"
-QT_MOC_LITERAL(7, 94, 9), // "longitude"
-QT_MOC_LITERAL(8, 104, 5) // "theta"
+QT_MOC_LITERAL(3, 34, 23), // "on_pushButton_2_clicked"
+QT_MOC_LITERAL(4, 58, 13), // "onRosSpinOnce"
+QT_MOC_LITERAL(5, 72, 16), // "onBoatPosUpdated"
+QT_MOC_LITERAL(6, 89, 8), // "latitude"
+QT_MOC_LITERAL(7, 98, 9), // "longitude"
+QT_MOC_LITERAL(8, 108, 5) // "theta"
 
     },
     "mapchannel\0on_pushButton_clicked\0\0"
-    "onClearTrackClicked\0onRosSpinOnce\0"
+    "on_pushButton_2_clicked\0onRosSpinOnce\0"
     "onBoatPosUpdated\0latitude\0longitude\0"
     "theta"
 };
@@ -84,7 +84,7 @@ void mapchannel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->on_pushButton_clicked(); break;
-        case 1: _t->onClearTrackClicked(); break;
+        case 1: _t->on_pushButton_2_clicked(); break;
         case 2: _t->onRosSpinOnce(); break;
         case 3: _t->onBoatPosUpdated((*reinterpret_cast< double(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2])),(*reinterpret_cast< double(*)>(_a[3]))); break;
         default: ;
