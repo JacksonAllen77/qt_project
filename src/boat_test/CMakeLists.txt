@@ -33,11 +33,13 @@ set(SOURCES
     src/connectchannel.cpp
     src/passid.cpp
     src/pathchannel.cpp
+    src/boatchannel.cpp
 )
 # 添加头文件
 set(HEADERS
     mapchannel.h
     pathchannel.h
+    boatchannel.h
 
 
 )
@@ -47,6 +49,7 @@ set(FORMS
     src/mapchannel.ui
     src/connectchannel.ui
     src/pathchannel.ui
+    src/boatchannel.ui
 )
 
 ## Uncomment this if the package has a setup.py. This macro ensures

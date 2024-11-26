@@ -599,6 +599,33 @@ boat_test_autogen/mocs_compilation.cpp.s:
 	cd /home/ro/boat_test/build && $(MAKE) -f boat_test/CMakeFiles/boat_test.dir/build.make boat_test/CMakeFiles/boat_test.dir/boat_test_autogen/mocs_compilation.cpp.s
 .PHONY : boat_test_autogen/mocs_compilation.cpp.s
 
+src/boatchannel.o: src/boatchannel.cpp.o
+
+.PHONY : src/boatchannel.o
+
+# target to build an object file
+src/boatchannel.cpp.o:
+	cd /home/ro/boat_test/build && $(MAKE) -f boat_test/CMakeFiles/boat_test.dir/build.make boat_test/CMakeFiles/boat_test.dir/src/boatchannel.cpp.o
+.PHONY : src/boatchannel.cpp.o
+
+src/boatchannel.i: src/boatchannel.cpp.i
+
+.PHONY : src/boatchannel.i
+
+# target to preprocess a source file
+src/boatchannel.cpp.i:
+	cd /home/ro/boat_test/build && $(MAKE) -f boat_test/CMakeFiles/boat_test.dir/build.make boat_test/CMakeFiles/boat_test.dir/src/boatchannel.cpp.i
+.PHONY : src/boatchannel.cpp.i
+
+src/boatchannel.s: src/boatchannel.cpp.s
+
+.PHONY : src/boatchannel.s
+
+# target to generate assembly for a file
+src/boatchannel.cpp.s:
+	cd /home/ro/boat_test/build && $(MAKE) -f boat_test/CMakeFiles/boat_test.dir/build.make boat_test/CMakeFiles/boat_test.dir/src/boatchannel.cpp.s
+.PHONY : src/boatchannel.cpp.s
+
 src/connectchannel.o: src/connectchannel.cpp.o
 
 .PHONY : src/connectchannel.o
@@ -804,6 +831,9 @@ help:
 	@echo "... boat_test_autogen/mocs_compilation.o"
 	@echo "... boat_test_autogen/mocs_compilation.i"
 	@echo "... boat_test_autogen/mocs_compilation.s"
+	@echo "... src/boatchannel.o"
+	@echo "... src/boatchannel.i"
+	@echo "... src/boatchannel.s"
 	@echo "... src/connectchannel.o"
 	@echo "... src/connectchannel.i"
 	@echo "... src/connectchannel.s"

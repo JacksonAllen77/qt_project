@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
     m = new mapchannel(this);
     m1 = new connectchannel(this);
     m2 = new pathchannel(this);
+    m3 = new boatchannel(this);
 
 }
 
@@ -15,6 +16,7 @@ MainWindow::~MainWindow() {
     delete m;
     delete m1;
     delete m2;
+    delete m3;
 }
 
 void MainWindow::on_pushButton_clicked() {
@@ -30,6 +32,13 @@ void MainWindow::on_pushButton_2_clicked() {
 void MainWindow::on_pushButton_3_clicked()
 {
     m2->show(); // 打开连接窗口
+    this->hide();
+}
+
+
+void MainWindow::on_pushButton_5_clicked()
+{
+    m3->show(); // 打开连接窗口
     this->hide();
 }
 

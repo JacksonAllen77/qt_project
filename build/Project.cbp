@@ -719,6 +719,15 @@
 		<Unit filename="/home/ro/boat_test/build/boat_test/boat_test_autogen/mocs_compilation.cpp">
 			<Option target="boat_test"/>
 		</Unit>
+		<Unit filename="/home/ro/boat_test/src/boat_test/src/boatchannel.cpp">
+			<Option target="boat_test"/>
+		</Unit>
+		<Unit filename="/home/ro/boat_test/src/boat_test/src/boatchannel.h">
+			<Option target="boat_test"/>
+		</Unit>
+		<Unit filename="/home/ro/boat_test/src/boat_test/src/boatchannel.ui">
+			<Option target="boat_test"/>
+		</Unit>
 		<Unit filename="/home/ro/boat_test/src/boat_test/src/connectchannel.cpp">
 			<Option target="boat_test"/>
 		</Unit>

@@ -5,6 +5,7 @@
 #include "mapchannel.h" // 地图交互窗口
 #include "connectchannel.h" // 连接窗口（此处假设存在）
 #include "pathchannel.h"
+#include "boatchannel.h"
 
 namespace Ui {
 class MainWindow;
@@ -20,14 +21,15 @@ public:
 private slots:
     void on_pushButton_clicked();  // 打开地图窗口
     void on_pushButton_2_clicked(); // 打开连接窗口
-
     void on_pushButton_3_clicked();
+    void on_pushButton_5_clicked();
 
 private:
     Ui::MainWindow *ui;
     mapchannel *m; // 实时地图窗口
     connectchannel *m1; // 连接窗口
     pathchannel *m2; // 路径规划窗口
+    boatchannel *m3;
 };
 
 #endif // MAINWINDOW_H
