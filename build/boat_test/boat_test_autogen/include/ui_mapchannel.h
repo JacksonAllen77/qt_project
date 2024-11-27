@@ -41,7 +41,6 @@ public:
     QFrame *line_4;
     QPushButton *pushButton_2;
     QPushButton *pushButton_3;
-    QPushButton *pushButton_4;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -98,9 +97,6 @@ public:
         pushButton_3 = new QPushButton(centralwidget);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
         pushButton_3->setGeometry(QRect(220, 45, 89, 25));
-        pushButton_4 = new QPushButton(centralwidget);
-        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
-        pushButton_4->setGeometry(QRect(400, 45, 89, 25));
         mapchannel->setCentralWidget(centralwidget);
         menubar = new QMenuBar(mapchannel);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -127,7 +123,6 @@ public:
         label_4->setText(QApplication::translate("mapchannel", "\350\211\217\345\220\221:", nullptr));
         pushButton_2->setText(QApplication::translate("mapchannel", "\346\270\205\351\231\244\350\275\250\350\277\271", nullptr));
         pushButton_3->setText(QApplication::translate("mapchannel", "\344\277\235\345\255\230\350\275\250\350\277\271", nullptr));
-        pushButton_4->setText(QApplication::translate("mapchannel", "\345\233\236\346\224\276", nullptr));
     } // retranslateUi
 
 };

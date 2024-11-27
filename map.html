@@ -15,9 +15,17 @@
 <body>
     <div id="container"></div>
 
+    <!-- 控制轨迹回放速度的按钮 -->
+    <button onclick="saveTrackToCSV()">保存轨迹为 CSV</button>
+    <input type="file" onchange="replayTrackFromCSV(event)" />
+    <button onclick="clearTrack()">清除轨迹</button>
+    <button onclick="clearBoatMarker()">清除船只标记</button>
+
     <script type="text/javascript">
         var boatMarker;
         var boatTrackPolyline = new BMap.Polyline([], { strokeColor: "blue", strokeWeight: 3, strokeOpacity: 0.7 });
+        var boatPoints = [];  // 保存艇的轨迹点
+
         // 创建地图实例
         var map = new BMap.Map("container");  
         map.centerAndZoom(new BMap.Point(119.939631, 32.078577), 3);  // 初始化地图，设置中心点坐标和地图级别
@@ -35,7 +43,6 @@
             fillOpacity: 0.8
         });
 
-        var boatPoints = [];  // 保存艇的轨迹点
         // WGS84 坐标转换为百度地图坐标
         function wgs84tobd09(lng, lat) {
             // 假设你已经引入了坐标转换函数，具体实现可根据项目需求选择
@@ -63,12 +70,23 @@
             boatPoints.push(currentPoint);  // 将当前点添加到轨迹中
             boatTrackPolyline.setPath(boatPoints);  // 更新轨迹
             map.addOverlay(boatTrackPolyline);  // 显示轨迹
+
+            // 通知 Qt 后端更新轨迹数据
+            if (window.bridge) {
+                window.bridge.updateTrackData(lng, lat, course);  // 通过 Qt WebChannel 将数据传递给 Qt 后端
+            }
+
+            console.log("Added point:", currentPoint);  // 调试输出
+            console.log("Current boatPoints:", boatPoints);  // 打印当前轨迹点
+            
         }
+
 
         // 清除轨迹
         function clearTrack() {
             boatPoints = [];
             map.removeOverlay(boatTrackPolyline);
+            
         }
 
         // 清除船只标记
@@ -84,6 +102,22 @@
             channel.objects.passId.boatPosUpdated.connect(showBoatPosition);
             channel.objects.passId.clearTrackClicked.connect(clearTrack);
         });
+
+        // 保存轨迹为 CSV 文件
+        function saveTrackToCSV() {
+            if (boatPoints.length === 0) {
+                alert("没有轨迹可以保存！");
+                return;
+            }
+
+            // 向 Qt 后端发送轨迹数据
+            if (window.bridge) {
+                var points = boatPoints.map(function(item) {
+                    return [item.point.lng, item.point.lat, item.course];  // 包含经纬度和航向
+                });
+                window.bridge.saveTrackData(points);  // 传递轨迹数据到 Qt 后端
+            }
+        }
     </script>
 </body>
 </html>

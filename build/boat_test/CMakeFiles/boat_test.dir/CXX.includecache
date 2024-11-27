@@ -45,6 +45,8 @@ QtCore/qbytearray.h
 -
 QtCore/qmetatype.h
 -
+QtCore/QList
+-
 
 /home/ro/boat_test/build/boat_test/boat_test_autogen/UVLADIE3JM/moc_pathchannel.cpp
 src/pathchannel.h
@@ -117,6 +119,14 @@ geometry_msgs/Pose2D.h
 -
 std_msgs/Float32.h
 -
+QFile
+-
+QTextStream
+-
+QMessageBox
+-
+QFileDialog
+-
 
 /home/ro/boat_test/src/boat_test/src/mapchannel.h
 QMainWindow
@@ -133,9 +143,23 @@ std_msgs/Float32.h
 -
 passid.h
 /home/ro/boat_test/src/boat_test/src/passid.h
+QList
+-
+QFile
+-
+QTextStream
+-
+QMessageBox
+-
+QFileDialog
+-
 
 /home/ro/boat_test/src/boat_test/src/passid.h
 QObject
+-
+QList
+-
+QString
 -
 
 /home/ro/boat_test/src/boat_test/src/pathchannel.h
@@ -854,6 +878,10 @@ time.h
 qdebug.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QFile
+qfile.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QFlags
 qflags.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h
@@ -861,6 +889,10 @@ qflags.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonValue
 qjsonvalue.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qjsonvalue.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QList
+qlist.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QMetaType
 qmetatype.h
@@ -877,6 +909,10 @@ qshareddata.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
 qstring.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QTextStream
+qtextstream.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer
 qtimer.h
@@ -1070,6 +1106,16 @@ map
 utility
 -
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qdir.h
+QtCore/qstring.h
+-
+QtCore/qfileinfo.h
+-
+QtCore/qstringlist.h
+-
+QtCore/qshareddata.h
+-
+
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qeventloop.h
 QtCore/qobject.h
 -
@@ -1086,6 +1132,16 @@ stdio.h
 QtCore/qiodevice.h
 -
 QtCore/qstring.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qfileinfo.h
+QtCore/qfile.h
+-
+QtCore/qlist.h
+-
+QtCore/qshareddata.h
+-
+QtCore/qmetatype.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h
@@ -2306,6 +2362,10 @@ QtWebEngineCore/qwebenginehttprequest.h
 qapplication.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QFileDialog
+qfiledialog.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qfiledialog.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QFrame
 qframe.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h
@@ -2329,6 +2389,10 @@ qmainwindow.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar
 qmenubar.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenubar.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox
+qmessagebox.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton
 qpushbutton.h
@@ -2410,6 +2474,24 @@ limits.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtWidgets/qwidget.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qwidget.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qfiledialog.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtCore/qdir.h
+-
+QtCore/qstring.h
+-
+QtCore/qurl.h
+-
+QtWidgets/qdialog.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h
@@ -2500,6 +2582,12 @@ QtWidgets/qaction.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtWidgets/qmenu.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qdialog.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h
