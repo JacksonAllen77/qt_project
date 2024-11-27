@@ -9,7 +9,9 @@
 
 pathchannel::pathchannel(QWidget *parent)
     : QMainWindow(parent),
-    ui(new Ui::pathchannel)
+    ui(new Ui::pathchannel),
+    isDrawing(false)  // 初始化绘制模式状态为 false
+
 {
     ui->setupUi(this);
 
@@ -90,3 +92,17 @@ void pathchannel::onRosSpinOnce()
 {
     ros::spinOnce();
 }
+
+void pathchannel::on_pushButton_2_clicked()
+{
+    if (isDrawing) {
+        ui->pushButton_2->setText("开启绘制模式");
+        webEngineView->page()->runJavaScript("document.getElementById('toggleDrawingBtn').click();");
+        isDrawing = false;
+    } else {
+        ui->pushButton_2->setText("关闭绘制模式");
+        webEngineView->page()->runJavaScript("document.getElementById('toggleDrawingBtn').click();");
+        isDrawing = true;
+    }
+}
+

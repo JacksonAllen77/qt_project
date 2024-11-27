@@ -103,9 +103,9 @@
     <property name="geometry">
      <rect>
       <x>-10</x>
-      <y>50</y>
+      <y>90</y>
       <width>811</width>
-      <height>521</height>
+      <height>481</height>
      </rect>
     </property>
    </widget>
@@ -152,13 +152,39 @@
     <property name="geometry">
      <rect>
       <x>-10</x>
-      <y>40</y>
+      <y>80</y>
       <width>701</width>
       <height>20</height>
      </rect>
     </property>
     <property name="orientation">
      <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>45</y>
+      <width>130</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>开启/关闭标注工具</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_3">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>50</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
     </property>
    </widget>
   </widget>

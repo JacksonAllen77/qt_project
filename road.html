@@ -16,6 +16,7 @@
 </head>
 <body>
     <div id="container"></div>
+    <button id="toggleDrawingBtn">开启标注工具</button>  <!-- 切换绘制模式按钮 -->
 
     <script type="text/javascript">
         var map = new BMap.Map("container");
@@ -40,7 +41,7 @@
             var point = new BMap.Point(lng, lat);
             return [point.lng, point.lat];
         }
-
+        
         // 显示艇的位置
         function showBoatPosition(lng, lat, course) {
             var currentPosition = wgs84tobd09(lng, lat);  // 转换坐标
@@ -57,8 +58,6 @@
             boatPoints.push(currentPoint);  // 将当前点添加到轨迹中
             boatTrackPolyline.setPath(boatPoints);  // 更新轨迹
             map.addOverlay(boatTrackPolyline);  // 显示轨迹
-
-            
         }
 
         // 清除艇轨迹
@@ -109,8 +108,9 @@
 
         // 绘制完成后的回调函数
         var markerCount = 1;  // 初始化计数器
+        var lastMarker;
+        var polylineArray = [];
 
-        // 绘制完成后的回调函数
         function taskOverlaysComplete(e) {
             if (e.overlay instanceof BMap.Marker) {
                 var marker = e.overlay;
@@ -122,11 +122,25 @@
                 // 增加计数器
                 markerCount++;
 
-                // 保存更新后的计数器到本地存储
-                localStorage.setItem("markerCount", markerCount);
-
                 // 将该标注点添加到地图
                 map.addOverlay(marker);
+
+                // 如果有上一个标注点，则画一条虚线连接上一个点和当前点
+                if (lastMarker) {
+                    var lastPoint = lastMarker.getPosition();
+                    var currentPoint = marker.getPosition();
+                    var polyline = new BMap.Polyline([lastPoint, currentPoint], { 
+                        strokeColor: "red", 
+                        strokeWeight: 2, 
+                        strokeOpacity: 0.5, 
+                        strokeStyle: "dashed" 
+                    });
+                    map.addOverlay(polyline);  // 添加到地图
+                    polylineArray.push(polyline);  // 保存每个多段线
+                }
+                
+                // 更新上一个标注点
+                lastMarker = marker;
             }
             // 处理其他类型的覆盖物
             else if (e.overlay instanceof BMap.Polyline) {
@@ -140,8 +154,8 @@
                 e.overlay.addEventListener("click", overlay_style);
             }
         }
+        
         drawingManager.addEventListener("overlaycomplete", taskOverlaysComplete);
-
         // 使用Qt WebChannel与Qt代码交互
         new QWebChannel(qt.webChannelTransport, function(channel) {
             window.bridge = channel.objects.passId;  // 注册一个通道，将window.bridge连接到qt下的passId，形成通路
@@ -149,10 +163,20 @@
             channel.objects.passId.clearTrackClicked.connect(clearTrack);
         });
 
-        // 右键菜单功能
-        var menu = new BMap.ContextMenu();
-        menu.addItem(new BMap.MenuItem("清除轨迹", clearTrack, 100));
-        map.addContextMenu(menu);
+        // 按钮点击事件，切换绘制模式
+        document.getElementById("toggleDrawingBtn").onclick = function() {
+            // 获取当前的绘制模式状态
+            var isDrawing = drawingManager.getDrawingMode() !== BMapLib.DRAWING_NONE;
+
+            // 如果当前处于绘制模式，关闭绘制工具
+            if (isDrawing) {
+                drawingManager.close();  // 关闭绘制工具
+                this.innerText = "开启标注工具";  
+            } else {
+                drawingManager.open();  // 开启绘制工具
+                this.innerText = "关闭标注工具";  
+            }
+        };
     </script>
 </body>
 </html>

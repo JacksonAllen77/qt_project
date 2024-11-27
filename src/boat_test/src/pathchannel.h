@@ -29,8 +29,11 @@ private slots:
     void onRosSpinOnce();              // 定时器回调函数
     void onBoatPosUpdated(double latitude, double longitude, double theta); // 地图更新函数
 
+    void on_pushButton_2_clicked();
+
 private:
     Ui::pathchannel *ui;
+    bool isDrawing;  // 用于标记绘制模式的状态
 
     // ROS 相关
     ros::NodeHandle nh;               // NodeHandle 作为类成员
