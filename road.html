@@ -57,6 +57,8 @@
             boatPoints.push(currentPoint);  // 将当前点添加到轨迹中
             boatTrackPolyline.setPath(boatPoints);  // 更新轨迹
             map.addOverlay(boatTrackPolyline);  // 显示轨迹
+
+            
         }
 
         // 清除艇轨迹
@@ -88,20 +90,56 @@
             else if (p instanceof BMap.Polyline) {
                 alert("路径: " + p.getPath());
             }
+            else if (p instanceof BMap.Circle) {
+                var bdCenter = p.getCenter();
+                var wgsCenter = wgs84tobd09(bdCenter.lng, bdCenter.lat);
+                alert("圆心: " + wgsCenter[0].toFixed(7) + ", " + wgsCenter[1].toFixed(7) + "\n" + "半径: " + p.getRadius().toFixed(1) + "m");
+            }
+            else if (p instanceof BMap.Polygon) {
+                var polygonPoints = p.getPath();
+                var str = "区域边界点:\n";
+                for (var i = 0; i < polygonPoints.length; i++) {
+                    var bdPos = polygonPoints[i];
+                    var wgsPos = wgs84tobd09(bdPos.lng, bdPos.lat);
+                    str += ("ID" + i + ": " + wgsPos[0].toFixed(7) + ", " + wgsPos[1].toFixed(7) + "\n");
+                }
+                alert(str);
+            }
         }
+
+        // 绘制完成后的回调函数
+        var markerCount = 1;  // 初始化计数器
 
         // 绘制完成后的回调函数
         function taskOverlaysComplete(e) {
             if (e.overlay instanceof BMap.Marker) {
-                wayPoints.push(e.overlay.getPosition());
-                map.addOverlay(wayPointsPolyline);
+                var marker = e.overlay;
+                
+                // 为标注点添加数字标签
+                var label = new BMap.Label(markerCount.toString(), {offset: new BMap.Size(20, -10)});
+                marker.setLabel(label);  // 将Label添加到Marker上
+                
+                // 增加计数器
+                markerCount++;
+
+                // 保存更新后的计数器到本地存储
+                localStorage.setItem("markerCount", markerCount);
+
+                // 将该标注点添加到地图
+                map.addOverlay(marker);
             }
+            // 处理其他类型的覆盖物
             else if (e.overlay instanceof BMap.Polyline) {
                 map.addOverlay(e.overlay);
                 e.overlay.addEventListener("click", overlay_style);
             }
+            else if (e.overlay instanceof BMap.Circle) {
+                e.overlay.addEventListener("click", overlay_style);
+            }
+            else if (e.overlay instanceof BMap.Polygon) {
+                e.overlay.addEventListener("click", overlay_style);
+            }
         }
-
         drawingManager.addEventListener("overlaycomplete", taskOverlaysComplete);
 
         // 使用Qt WebChannel与Qt代码交互
