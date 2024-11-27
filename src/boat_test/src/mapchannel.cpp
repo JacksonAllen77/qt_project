@@ -13,7 +13,8 @@
 
 mapchannel::mapchannel(QWidget *parent)
     : QMainWindow(parent),
-    ui(new Ui::mapchannel)
+    ui(new Ui::mapchannel),
+    tempFilePath("/home/ro/boat_test/run_csv/intermediate_file.csv")  // 临时保存轨迹数据的路径
 {
     ui->setupUi(this);
 
@@ -66,6 +67,9 @@ void mapchannel::boatPositionCallback(const geometry_msgs::Pose2D::ConstPtr& msg
     point.latitude = msg->y;
     point.theta = msg->theta;
     boatPoints.append(point);  // 将当前点添加到轨迹列表
+
+    // 保存轨迹数据到中间文件（不弹出提示框）
+    saveTrackToCSV(boatPoints, tempFilePath);
 }
 
 void mapchannel::boatSpeedCallback(const std_msgs::Float32::ConstPtr& msg)
@@ -129,14 +133,20 @@ void mapchannel::on_pushButton_3_clicked()
         return;
     }
 
-    // 弹出文件保存对话框
+    // 弹出文件保存对话框，选择保存路径
     QString filePath = QFileDialog::getSaveFileName(this, "保存轨迹", "", "CSV Files (*.csv)");
     if (filePath.isEmpty()) {
         return; // 用户取消保存
     }
 
-    // 将轨迹数据传递给 PassId 类的 saveTrackData 信号
-    emit passId->saveTrackData(boatPoints, filePath);
+    // 复制中间文件到用户指定路径
+    if (QFile::copy(tempFilePath, filePath)) {
+        // 复制成功后弹出保存成功提示
+        QMessageBox::information(this, "保存成功", "轨迹已保存！");
+    } else {
+        // 复制失败，弹出错误提示
+        QMessageBox::critical(this, "错误", "无法保存文件！");
+    }
 }
 
 // 实现 saveTrackToCSV 函数，保存轨迹数据到文件
@@ -156,5 +166,4 @@ void mapchannel::saveTrackToCSV(const QList<BoatPoint>& boatPoints, const QStrin
     }
 
     file.close();
-    QMessageBox::information(this, "保存成功", "轨迹已保存！");
 }

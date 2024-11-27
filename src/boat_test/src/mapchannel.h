@@ -43,6 +43,7 @@ private:
     ros::Subscriber speed_sub;        // 订阅 /boat_speed
 
     QList<BoatPoint> boatPoints;    // 保存船只轨迹点的列表
+    QString tempFilePath;             // 临时文件路径
 
     // 回调函数
     void boatPositionCallback(const geometry_msgs::Pose2D::ConstPtr& msg);
