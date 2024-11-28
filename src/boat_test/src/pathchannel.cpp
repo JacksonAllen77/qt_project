@@ -21,6 +21,9 @@ pathchannel::pathchannel(QWidget *parent)
     ros::init(argc, argv, "qt_ros_subscriber");
     ros::NodeHandle nh;
 
+    // 创建 ROS 发布者
+    marker_pub = nh.advertise<geometry_msgs::Pose2D>("marker_topic", 10);
+
     // 创建 ROS 订阅者
     position_sub = nh.subscribe("/boat_position", 10, &pathchannel::boatPositionCallback, this);
     speed_sub = nh.subscribe("/boat_speed", 10, &pathchannel::boatSpeedCallback, this);
@@ -127,3 +130,17 @@ void pathchannel::on_pushButton_3_clicked()
     webEngineView->page()->runJavaScript("clearDrawing();");
 }
 
+// 新增槽函数，接收来自 JavaScript 的标注点经纬度
+void pathchannel::onMarkerDrawn(double lng, double lat)
+{
+    qDebug() << "Received marker position:" << lng << lat;
+
+    // 发布经纬度为 ROS 消息
+    geometry_msgs::Pose2D pose;
+    pose.x = lng;  // 经度
+    pose.y = lat;  // 纬度
+    pose.theta = 0;  // 可选的航向（默认为 0）
+
+    qDebug() << "Publishing marker data: Longitude = " << pose.x << ", Latitude = " << pose.y;
+    marker_pub.publish(pose);  // 发布经纬度信息
+}

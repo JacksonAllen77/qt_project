@@ -30,6 +30,7 @@ private slots:
     void onClearTrackClicked();        // 清除轨迹数据
     void onRosSpinOnce();              // 定时器回调函数
     void onBoatPosUpdated(double latitude, double longitude, double theta); // 地图更新函数
+    void onMarkerDrawn(double lng, double lat);  // 新增槽函数
 
 
 
@@ -41,6 +42,7 @@ private:
     ros::NodeHandle nh;               // NodeHandle 作为类成员
     ros::Subscriber position_sub;     // 订阅 /boat_position
     ros::Subscriber speed_sub;        // 订阅 /boat_speed
+    ros::Publisher marker_pub;     // 发布器，用于发布标记信息
 
     // 回调函数
     void boatPositionCallback(const geometry_msgs::Pose2D::ConstPtr& msg);

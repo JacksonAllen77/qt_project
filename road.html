@@ -86,6 +86,33 @@
             rectangleOptions: { strokeColor: "red", fillColor: "red", strokeWeight: 2, strokeOpacity: 0.8, fillOpacity: 0.2 }
         });
 
+        // 在绘制完成后触发事件
+        drawingManager.addEventListener("overlaycomplete", function(e) {
+            // 判断标注类型（点、线、圆等）
+            if (e.overlay instanceof BMap.Marker) {
+                var marker = e.overlay;
+                var lng = marker.getPosition().lng;
+                var lat = marker.getPosition().lat;
+                console.log("标注点经纬度:", lng, lat);
+
+                // 发送到 C++ 端
+                if (window.qt && qt.onMarkerDrawn) {
+                    qt.onMarkerDrawn(lng, lat); // 通过 QtWebChannel 传递经纬度
+                }
+            } else if (e.overlay instanceof BMap.Polyline) {
+                var polyline = e.overlay;
+                var path = polyline.getPath();
+                console.log("折线经纬度:", path);
+
+                if (window.qt && qt.onPolylineDrawn) {
+                    var coordinates = path.map(function(point) {
+                        return { lng: point.lng, lat: point.lat };
+                    });
+                    qt.onPolylineDrawn(coordinates); // 传递折线的所有点
+                }
+            }
+        });
+
          // 清除绘制的标注痕迹
         function clearDrawing() {
             // 先清除数字标签和点标记
