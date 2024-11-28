@@ -25,11 +25,13 @@ public:
 
 private slots:
     void on_pushButton_clicked();       // 返回主界面
+    void on_pushButton_2_clicked();
+    void on_pushButton_3_clicked();
     void onClearTrackClicked();        // 清除轨迹数据
     void onRosSpinOnce();              // 定时器回调函数
     void onBoatPosUpdated(double latitude, double longitude, double theta); // 地图更新函数
 
-    void on_pushButton_2_clicked();
+
 
 private:
     Ui::pathchannel *ui;

@@ -167,7 +167,7 @@
       <x>20</x>
       <y>45</y>
       <width>130</width>
-      <height>31</height>
+      <height>30</height>
      </rect>
     </property>
     <property name="text">
@@ -177,14 +177,14 @@
    <widget class="QPushButton" name="pushButton_3">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>50</y>
-      <width>89</width>
-      <height>25</height>
+      <x>190</x>
+      <y>45</y>
+      <width>130</width>
+      <height>30</height>
      </rect>
     </property>
     <property name="text">
-     <string/>
+     <string>清除标注工具痕迹</string>
     </property>
    </widget>
   </widget>

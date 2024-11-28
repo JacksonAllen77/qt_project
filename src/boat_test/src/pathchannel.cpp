@@ -96,13 +96,33 @@ void pathchannel::onRosSpinOnce()
 void pathchannel::on_pushButton_2_clicked()
 {
     if (isDrawing) {
-        ui->pushButton_2->setText("开启绘制模式");
+        ui->pushButton_2->setText("开启标注工具");  // 更新按钮文字
+
+        // 触发 JavaScript 代码来禁用标注工具
         webEngineView->page()->runJavaScript("document.getElementById('toggleDrawingBtn').click();");
+        webEngineView->page()->runJavaScript("document.getElementById('toggleMarkerBtn').click();");
+
+        // 可以直接控制标注工具的状态，确保它被禁用
+        webEngineView->page()->runJavaScript("drawingManager.close();");
+
         isDrawing = false;
     } else {
-        ui->pushButton_2->setText("关闭绘制模式");
+        ui->pushButton_2->setText("关闭标注工具");  // 更新按钮文字
+
+        // 触发 JavaScript 代码来启用标注工具
         webEngineView->page()->runJavaScript("document.getElementById('toggleDrawingBtn').click();");
+        webEngineView->page()->runJavaScript("document.getElementById('toggleMarkerBtn').click();");
+
+        // 可以直接控制标注工具的状态，确保它被启用
+        webEngineView->page()->runJavaScript("drawingManager.open();");
+
         isDrawing = true;
     }
+}
+
+
+void pathchannel::on_pushButton_3_clicked()
+{
+
 }
 

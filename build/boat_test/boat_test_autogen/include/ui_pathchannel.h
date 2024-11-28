@@ -93,10 +93,10 @@ public:
         line_2->setFrameShadow(QFrame::Sunken);
         pushButton_2 = new QPushButton(centralwidget);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(20, 45, 130, 31));
+        pushButton_2->setGeometry(QRect(20, 45, 130, 30));
         pushButton_3 = new QPushButton(centralwidget);
         pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setGeometry(QRect(230, 50, 89, 25));
+        pushButton_3->setGeometry(QRect(190, 45, 130, 30));
         pathchannel->setCentralWidget(centralwidget);
         menubar = new QMenuBar(pathchannel);
         menubar->setObjectName(QString::fromUtf8("menubar"));
@@ -122,7 +122,7 @@ public:
         label_2->setText(QApplication::translate("pathchannel", "\347\273\264\345\272\246:", nullptr));
         label->setText(QApplication::translate("pathchannel", "\347\273\217\345\272\246:", nullptr));
         pushButton_2->setText(QApplication::translate("pathchannel", "\345\274\200\345\220\257/\345\205\263\351\227\255\346\240\207\346\263\250\345\267\245\345\205\267", nullptr));
-        pushButton_3->setText(QString());
+        pushButton_3->setText(QApplication::translate("pathchannel", "\346\270\205\351\231\244\346\240\207\346\263\250\345\267\245\345\205\267\347\227\225\350\277\271", nullptr));
     } // retranslateUi
 
 };

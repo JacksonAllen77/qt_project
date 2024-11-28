@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_pathchannel_t {
-    QByteArrayData data[10];
-    char stringdata0[135];
+    QByteArrayData data[11];
+    char stringdata0[159];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -34,19 +34,21 @@ static const qt_meta_stringdata_pathchannel_t qt_meta_stringdata_pathchannel = {
 QT_MOC_LITERAL(0, 0, 11), // "pathchannel"
 QT_MOC_LITERAL(1, 12, 21), // "on_pushButton_clicked"
 QT_MOC_LITERAL(2, 34, 0), // ""
-QT_MOC_LITERAL(3, 35, 19), // "onClearTrackClicked"
-QT_MOC_LITERAL(4, 55, 13), // "onRosSpinOnce"
-QT_MOC_LITERAL(5, 69, 16), // "onBoatPosUpdated"
-QT_MOC_LITERAL(6, 86, 8), // "latitude"
-QT_MOC_LITERAL(7, 95, 9), // "longitude"
-QT_MOC_LITERAL(8, 105, 5), // "theta"
-QT_MOC_LITERAL(9, 111, 23) // "on_pushButton_2_clicked"
+QT_MOC_LITERAL(3, 35, 23), // "on_pushButton_2_clicked"
+QT_MOC_LITERAL(4, 59, 23), // "on_pushButton_3_clicked"
+QT_MOC_LITERAL(5, 83, 19), // "onClearTrackClicked"
+QT_MOC_LITERAL(6, 103, 13), // "onRosSpinOnce"
+QT_MOC_LITERAL(7, 117, 16), // "onBoatPosUpdated"
+QT_MOC_LITERAL(8, 134, 8), // "latitude"
+QT_MOC_LITERAL(9, 143, 9), // "longitude"
+QT_MOC_LITERAL(10, 153, 5) // "theta"
 
     },
     "pathchannel\0on_pushButton_clicked\0\0"
+    "on_pushButton_2_clicked\0on_pushButton_3_clicked\0"
     "onClearTrackClicked\0onRosSpinOnce\0"
     "onBoatPosUpdated\0latitude\0longitude\0"
-    "theta\0on_pushButton_2_clicked"
+    "theta"
 };
 #undef QT_MOC_LITERAL
 
@@ -56,7 +58,7 @@ static const uint qt_meta_data_pathchannel[] = {
        8,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -64,18 +66,20 @@ static const uint qt_meta_data_pathchannel[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   39,    2, 0x08 /* Private */,
-       3,    0,   40,    2, 0x08 /* Private */,
-       4,    0,   41,    2, 0x08 /* Private */,
-       5,    3,   42,    2, 0x08 /* Private */,
-       9,    0,   49,    2, 0x08 /* Private */,
+       1,    0,   44,    2, 0x08 /* Private */,
+       3,    0,   45,    2, 0x08 /* Private */,
+       4,    0,   46,    2, 0x08 /* Private */,
+       5,    0,   47,    2, 0x08 /* Private */,
+       6,    0,   48,    2, 0x08 /* Private */,
+       7,    3,   49,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Double, QMetaType::Double, QMetaType::Double,    6,    7,    8,
     QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Double, QMetaType::Double, QMetaType::Double,    8,    9,   10,
 
        0        // eod
 };
@@ -87,10 +91,11 @@ void pathchannel::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->on_pushButton_clicked(); break;
-        case 1: _t->onClearTrackClicked(); break;
-        case 2: _t->onRosSpinOnce(); break;
-        case 3: _t->onBoatPosUpdated((*reinterpret_cast< double(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2])),(*reinterpret_cast< double(*)>(_a[3]))); break;
-        case 4: _t->on_pushButton_2_clicked(); break;
+        case 1: _t->on_pushButton_2_clicked(); break;
+        case 2: _t->on_pushButton_3_clicked(); break;
+        case 3: _t->onClearTrackClicked(); break;
+        case 4: _t->onRosSpinOnce(); break;
+        case 5: _t->onBoatPosUpdated((*reinterpret_cast< double(*)>(_a[1])),(*reinterpret_cast< double(*)>(_a[2])),(*reinterpret_cast< double(*)>(_a[3]))); break;
         default: ;
         }
     }
@@ -125,13 +130,13 @@ int pathchannel::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 6;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 6)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 5;
+        _id -= 6;
     }
     return _id;
 }
