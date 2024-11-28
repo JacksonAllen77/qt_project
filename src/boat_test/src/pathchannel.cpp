@@ -123,6 +123,7 @@ void pathchannel::on_pushButton_2_clicked()
 
 void pathchannel::on_pushButton_3_clicked()
 {
-
+    // 调用 JavaScript 的 clearDrawing 函数来清除标注痕迹
+    webEngineView->page()->runJavaScript("clearDrawing();");
 }
 

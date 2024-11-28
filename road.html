@@ -17,10 +17,11 @@
 <body>
     <div id="container"></div>
     <button id="toggleDrawingBtn">开启标注工具</button>  <!-- 切换绘制模式按钮 -->
+    <button id="clearDrawingBtn">清除标注工具痕迹</button> <!-- 清除标注工具按钮 -->
 
     <script type="text/javascript">
         var map = new BMap.Map("container");
-        map.centerAndZoom(new BMap.Point(100.939631, 33.078577), 2);  // 初始化地图，设置中心点坐标和地图级别
+        map.centerAndZoom(new BMap.Point(119.369631, 32.115577), 2);  // 初始化地图，设置中心点坐标和地图级别
         map.enableScrollWheelZoom(); // 开启滚轮缩放
         map.disableDoubleClickZoom();
         map.addControl(new BMap.NavigationControl({ type: BMAP_NAVIGATION_CONTROL_LARGE, showZoomInfo: true }));
@@ -66,6 +67,11 @@
             map.removeOverlay(boatTrackPolyline);
         }
 
+        // 用来保存由 DrawingManager 绘制的覆盖物（标注工具）
+        var polylineArray = [];
+        var markerArray = [];  // 用来保存绘制的点标记
+        var isDrawingToolOpen = false;
+
         // 绘制工具
         var drawingManager = new BMapLib.DrawingManager(map, {
             isOpen: false, // 是否开启绘制模式
@@ -79,6 +85,32 @@
             polygonOptions: { strokeColor: "red", fillColor: "red", strokeWeight: 2, strokeOpacity: 0.8, fillOpacity: 0.2 },
             rectangleOptions: { strokeColor: "red", fillColor: "red", strokeWeight: 2, strokeOpacity: 0.8, fillOpacity: 0.2 }
         });
+
+         // 清除绘制的标注痕迹
+        function clearDrawing() {
+            // 先清除数字标签和点标记
+            for (var i = 0; i < markerArray.length; i++) {
+                var marker = markerArray[i];
+                var label = marker.getLabel();
+                if (label) {
+                    marker.setLabel(null);  // 清除数字标签
+                }
+                map.removeOverlay(marker);  // 移除标记
+            }
+            markerArray = []; // 清空点标记数组
+
+            // 再清除绘制的折线
+            for (var i = 0; i < polylineArray.length; i++) {
+                map.removeOverlay(polylineArray[i]);
+            }
+            polylineArray = []; // 清空折线数组
+
+            // 重置标注点计数器，从 1 开始
+            markerCount = 1;
+
+            // 清空上一个标注点，确保重新开始绘制时不会连接到旧的点
+            lastMarker = null;
+        }
 
         // 切换绘制工具的函数
         function toggleDrawingManager() {
@@ -142,6 +174,9 @@
                 // 将该标注点添加到地图
                 map.addOverlay(marker);
 
+                // 保存标注点到 markerArray
+                markerArray.push(marker);  // 保存标记点到数组
+
                 // 如果有上一个标注点，则画一条虚线连接上一个点和当前点
                 if (lastMarker) {
                     var lastPoint = lastMarker.getPosition();
@@ -172,6 +207,9 @@
             }
         }
         drawingManager.addEventListener("overlaycomplete", taskOverlaysComplete);
+
+        // 绑定清除按钮
+        document.getElementById('clearDrawingBtn').addEventListener('click', clearDrawing);
     </script>
 </body>
 </html>
