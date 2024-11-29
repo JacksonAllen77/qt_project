@@ -21,6 +21,8 @@ find_package(catkin REQUIRED COMPONENTS
 # find_package(Boost REQUIRED COMPONENTS system)
 find_package(Qt5 REQUIRED Core Gui Widgets WebEngine WebEngineCore WebEngineWidgets WebChannel)
 
+# 添加资源文件到 Qt 资源系统
+qt5_add_resources(RESOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/images.qrc)
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
@@ -51,6 +53,8 @@ set(FORMS
     src/pathchannel.ui
     src/boatchannel.ui
 )
+
+
 
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
@@ -166,7 +170,7 @@ include_directories(${catkin_INCLUDE_DIRS} ${Qt5Core_INCLUDE_DIRS} ${Qt5Widgets_
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(${PROJECT_NAME} ${SOURCES} ${FORMS})
+add_executable(${PROJECT_NAME} ${SOURCES} ${FORMS} ${RESOURCES})
 target_link_libraries(${PROJECT_NAME}
   ${catkin_LIBRARIES}
   Qt5::Core

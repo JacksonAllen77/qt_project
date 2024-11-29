@@ -599,6 +599,33 @@ boat_test_autogen/mocs_compilation.cpp.s:
 	cd /home/ro/boat_test/build && $(MAKE) -f boat_test/CMakeFiles/boat_test.dir/build.make boat_test/CMakeFiles/boat_test.dir/boat_test_autogen/mocs_compilation.cpp.s
 .PHONY : boat_test_autogen/mocs_compilation.cpp.s
 
+qrc_images.o: qrc_images.cpp.o
+
+.PHONY : qrc_images.o
+
+# target to build an object file
+qrc_images.cpp.o:
+	cd /home/ro/boat_test/build && $(MAKE) -f boat_test/CMakeFiles/boat_test.dir/build.make boat_test/CMakeFiles/boat_test.dir/qrc_images.cpp.o
+.PHONY : qrc_images.cpp.o
+
+qrc_images.i: qrc_images.cpp.i
+
+.PHONY : qrc_images.i
+
+# target to preprocess a source file
+qrc_images.cpp.i:
+	cd /home/ro/boat_test/build && $(MAKE) -f boat_test/CMakeFiles/boat_test.dir/build.make boat_test/CMakeFiles/boat_test.dir/qrc_images.cpp.i
+.PHONY : qrc_images.cpp.i
+
+qrc_images.s: qrc_images.cpp.s
+
+.PHONY : qrc_images.s
+
+# target to generate assembly for a file
+qrc_images.cpp.s:
+	cd /home/ro/boat_test/build && $(MAKE) -f boat_test/CMakeFiles/boat_test.dir/build.make boat_test/CMakeFiles/boat_test.dir/qrc_images.cpp.s
+.PHONY : qrc_images.cpp.s
+
 src/boatchannel.o: src/boatchannel.cpp.o
 
 .PHONY : src/boatchannel.o
@@ -831,6 +858,9 @@ help:
 	@echo "... boat_test_autogen/mocs_compilation.o"
 	@echo "... boat_test_autogen/mocs_compilation.i"
 	@echo "... boat_test_autogen/mocs_compilation.s"
+	@echo "... qrc_images.o"
+	@echo "... qrc_images.i"
+	@echo "... qrc_images.s"
 	@echo "... src/boatchannel.o"
 	@echo "... src/boatchannel.i"
 	@echo "... src/boatchannel.s"

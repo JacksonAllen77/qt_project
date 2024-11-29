@@ -1,5 +1,10 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QTimer>
+#include <QDebug>
+#include <ros/ros.h>
+#include <geometry_msgs/Pose2D.h>
+#include <std_msgs/Float32.h>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent), ui(new Ui::MainWindow) {
@@ -9,6 +14,12 @@ MainWindow::MainWindow(QWidget *parent)
     m2 = new pathchannel(this);
     m3 = new boatchannel(this);
 
+
+    // 初始化 ROS
+    int argc = 0;
+    char **argv = nullptr;
+    ros::init(argc, argv, "qt_ros_subscriber");
+    ros::NodeHandle nh;
 }
 
 MainWindow::~MainWindow() {
@@ -34,7 +45,6 @@ void MainWindow::on_pushButton_3_clicked()
     m2->show(); // 打开连接窗口
     this->hide();
 }
-
 
 void MainWindow::on_pushButton_5_clicked()
 {

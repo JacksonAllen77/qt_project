@@ -18,6 +18,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/ro/boat_test/src/CMakeLists.txt"
   "/home/ro/boat_test/src/boat_test/CMakeLists.txt"
   "/home/ro/boat_test/src/boat_test/package.xml"
+  "/home/ro/boat_test/src/boat_test/src/images.qrc"
   "/opt/ros/noetic/share/catkin/cmake/all.cmake"
   "/opt/ros/noetic/share/catkin/cmake/assert.cmake"
   "/opt/ros/noetic/share/catkin/cmake/atomic_configure_file.cmake"

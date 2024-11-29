@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "/home/ro/boat_test/devel/lib/boat_test/boat_test"
   "/home/ro/boat_test/devel/lib/boat_test/boat_test.pdb"
   "CMakeFiles/boat_test.dir/boat_test_autogen/mocs_compilation.cpp.o"
+  "CMakeFiles/boat_test.dir/qrc_images.cpp.o"
   "CMakeFiles/boat_test.dir/src/boatchannel.cpp.o"
   "CMakeFiles/boat_test.dir/src/connectchannel.cpp.o"
   "CMakeFiles/boat_test.dir/src/main.cpp.o"
@@ -12,6 +13,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/boat_test.dir/src/mapchannel.cpp.o"
   "CMakeFiles/boat_test.dir/src/passid.cpp.o"
   "CMakeFiles/boat_test.dir/src/pathchannel.cpp.o"
+  "qrc_images.cpp"
 )
 
 # Per-language clean rules from dependency scanning.
