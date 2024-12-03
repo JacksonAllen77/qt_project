@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>BDMAP</title>
+    <style type="text/css">
+        html {height: 100%}
+        body {height: 100%; margin: 0px; padding: 0px;}
+        #container {height: 100%;}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/getscript?v=3.0&ak=FpdhNANTVMimSDFYJJ9EICFowPMBRt6C"></script>
+    <script type="text/javascript" src="qwebchannel.js"></script>  <!-- 引入qwebchannel.js -->
+    <script type="text/javascript" src="http://api.map.baidu.com/library/DrawingManager/1.4/src/DrawingManager_min.js"></script>
+    <link rel="stylesheet" href="http://api.map.baidu.com/library/DrawingManager/1.4/src/DrawingManager_min.css" />
+</head>
+<body>
+    <div id="container"></div>
+    
+    <!-- 控制轨迹回放速度的按钮 -->
+    <button onclick="saveTrackToCSV()">保存轨迹为 CSV</button>
+    <input type="file" onchange="replayTrackFromCSV(event)" />
+    <button onclick="clearTrack()">清除轨迹</button>
+    <button onclick="clearBoatMarker()">清除船只标记</button>
+    
+    <!-- 切换绘制模式按钮 -->
+    <button id="toggleDrawingBtn">开启标注工具</button> 
+    <button id="clearDrawingBtn">清除标注工具痕迹</button> 
+
+    <script type="text/javascript">
+        var boatMarker;
+        var boatTrackPolyline = new BMap.Polyline([], { strokeColor: "blue", strokeWeight: 3, strokeOpacity: 0.7 });
+        var boatPoints = [];  // 保存艇的轨迹点
+        var polylineArray = [];
+        var markerArray = [];  // 用来保存绘制的点标记
+        var isDrawingToolOpen = false;
+        var drawingManager;
+
+        // 创建地图实例
+        var map = new BMap.Map("container");  
+        map.centerAndZoom(new BMap.Point(119.939631, 32.078577), 3);  // 初始化地图，设置中心点坐标和地图级别
+        map.enableScrollWheelZoom(); // 开启滚轮缩放
+        map.disableDoubleClickZoom();
+        map.addControl(new BMap.NavigationControl({ type: BMAP_NAVIGATION_CONTROL_LARGE, showZoomInfo: true }));
+        map.addControl(new BMap.MapTypeControl({ mapTypes: [BMAP_NORMAL_MAP, BMAP_HYBRID_MAP], anchor: BMAP_ANCHOR_TOP_LEFT, offset: new BMap.Size(80, 50) }));
+        map.addControl(new BMap.ScaleControl({ anchor: BMAP_ANCHOR_TOP_LEFT }));
+
+        // 创建艇的标记和图标
+        var boatIcon = new BMap.Symbol(BMap_Symbol_SHAPE_FORWARD_CLOSED_ARROW, {
+            scale: 1.5,
+            strokeWeight: 1,
+            fillColor: "red",
+            fillOpacity: 0.8
+        });
+
+        // WGS84 坐标转换为百度地图坐标
+        function wgs84tobd09(lng, lat) {
+            var convertor = new BMap.Convertor();
+            var point = new BMap.Point(lng, lat);
+            return [point.lng, point.lat];
+        }
+
+        // 显示艇的位置
+        function showBoatPosition(lng, lat, course) {
+            var currentPosition = wgs84tobd09(lng, lat);  // 转换坐标
+            var currentPoint = new BMap.Point(currentPosition[0], currentPosition[1]);
+
+            if (!boatMarker) {
+                boatMarker = new BMap.Marker(currentPoint, { icon: boatIcon });
+                map.addOverlay(boatMarker);  // 添加标记到地图
+            } else {
+                boatMarker.setPosition(currentPoint);  // 更新标记位置
+            }
+
+            boatIcon.setRotation(course);
+            boatMarker.setIcon(boatIcon);  // 更新标记的图标
+            boatPoints.push(currentPoint);  // 将当前点添加到轨迹中
+            boatTrackPolyline.setPath(boatPoints);  // 更新轨迹
+            map.addOverlay(boatTrackPolyline);  // 显示轨迹
+        }
+
+        // 清除轨迹
+        function clearTrack() {
+            boatPoints = [];
+            map.removeOverlay(boatTrackPolyline);
+        }
+
+        // 清除船只标记
+        function clearBoatMarker() {
+            if (boatMarker) {
+                map.removeOverlay(boatMarker);  // 移除船只标记
+                boatMarker = null;  // 清空标记
+            }
+        }
+
+        // 绘制工具
+        drawingManager = new BMapLib.DrawingManager(map, {
+            isOpen: false, // 是否开启绘制模式
+            enableDrawingTool: true, // 是否显示工具栏
+            drawingToolOptions: {
+                anchor: BMAP_ANCHOR_TOP_RIGHT, // 工具栏位置
+                offset: new BMap.Size(5, 5)  // 工具栏偏移
+            },
+            circleOptions: { strokeColor: "red", fillColor: "red", strokeWeight: 2, strokeOpacity: 0.8, fillOpacity: 0.2 },
+            polylineOptions: { strokeColor: "red", strokeWeight: 2, strokeOpacity: 0.5, strokeStyle: 'dashed' },
+            polygonOptions: { strokeColor: "red", fillColor: "red", strokeWeight: 2, strokeOpacity: 0.8, fillOpacity: 0.2 },
+            rectangleOptions: { strokeColor: "red", fillColor: "red", strokeWeight: 2, strokeOpacity: 0.8, fillOpacity: 0.2 }
+        });
+
+        // 绘制完成后的回调函数
+        drawingManager.addEventListener("overlaycomplete", function(e) {
+            if (e.overlay instanceof BMap.Marker) {
+                var marker = e.overlay;
+                var lng = marker.getPosition().lng;
+                var lat = marker.getPosition().lat;
+                console.log("标注点经纬度:", lng, lat);
+
+                // 发送到 C++ 端
+                if (window.qt && qt.onMarkerDrawn) {
+                    qt.onMarkerDrawn(lng, lat); // 通过 QtWebChannel 传递经纬度
+                }
+            } else if (e.overlay instanceof BMap.Polyline) {
+                var polyline = e.overlay;
+                var path = polyline.getPath();
+                console.log("折线经纬度:", path);
+
+                if (window.qt && qt.onPolylineDrawn) {
+                    var coordinates = path.map(function(point) {
+                        return { lng: point.lng, lat: point.lat };
+                    });
+                    qt.onPolylineDrawn(coordinates); // 传递折线的所有点
+                }
+            }
+        });
+
+        // 切换绘制工具的函数
+        function toggleDrawingManager() {
+            if (isDrawingToolOpen) {
+                drawingManager.close();
+                document.getElementById('toggleDrawingBtn').innerText = "开启标注工具";
+            } else {
+                drawingManager.open();
+                document.getElementById('toggleDrawingBtn').innerText = "关闭标注工具";
+            }
+            isDrawingToolOpen = !isDrawingToolOpen;  // 切换状态
+        }
+
+        // 切换绘制工具
+        document.getElementById("toggleDrawingBtn").addEventListener("click", function() {
+            toggleDrawingManager();  // 切换工具栏状态
+        });
+
+        // 清除绘制的标注痕迹
+        function clearDrawing() {
+            for (var i = 0; i < markerArray.length; i++) {
+                var marker = markerArray[i];
+                map.removeOverlay(marker);  // 移除标记
+            }
+            markerArray = [];
+
+            for (var i = 0; i < polylineArray.length; i++) {
+                map.removeOverlay(polylineArray[i]);  // 移除折线
+            }
+            polylineArray = [];
+        }
+
+        // 绑定清除按钮
+        document.getElementById('clearDrawingBtn').addEventListener('click', clearDrawing);
+    </script>
+</body>
+</html>

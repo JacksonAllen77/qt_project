@@ -18,9 +18,9 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>69</y>
+      <y>59</y>
       <width>801</width>
-      <height>501</height>
+      <height>511</height>
      </rect>
     </property>
     <property name="minimumSize">
@@ -36,85 +36,16 @@
      </size>
     </property>
    </widget>
-   <widget class="Line" name="line_2">
+   <widget class="QWidget" name="widget_2" native="true">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>40</y>
-      <width>801</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>660</x>
-      <y>0</y>
-      <width>136</width>
+      <x>5</x>
+      <y>2</y>
+      <width>631</width>
       <height>61</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <property name="spacing">
-      <number>0</number>
-     </property>
-     <item>
-      <widget class="QPushButton" name="pushButton_3">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>25</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>25</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>清除标注工具痕迹</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_2">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>25</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>16777215</width>
-         <height>25</height>
-        </size>
-       </property>
-       <property name="text">
-        <string>开启/关闭标注工具</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>10</y>
-      <width>651</width>
-      <height>51</height>
-     </rect>
-    </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
-     <property name="spacing">
-      <number>0</number>
-     </property>
      <item>
       <widget class="QLabel" name="label">
        <property name="minimumSize">
@@ -275,8 +206,85 @@
          <height>25</height>
         </size>
        </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#pushButton {
+    background-color: rgb(255, 255, 255) !important; /* 默认背景颜色 */
+}
+
+QPushButton#pushButton:hover {
+    background-color: rgba(127, 255, 212, 0.4) !important; /* 悬停状态背景颜色，透明度为 0.4 */
+}</string>
+       </property>
        <property name="text">
         <string>返回主界面</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="widget_3" native="true">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>-5</y>
+      <width>161</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#pushButton_3 {
+    background-color: rgb(255, 255, 255) !important; /* 默认背景颜色 */
+}
+
+QPushButton#pushButton_3:hover {
+    background-color: rgba(127, 255, 212, 0.4) !important; /* 悬停状态背景颜色，透明度为 0.4 */
+}</string>
+       </property>
+       <property name="text">
+        <string>清除标注工具痕迹</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#pushButton_2 {
+    background-color: rgb(255, 255, 255) !important; /* 默认背景颜色 */
+}
+
+QPushButton#pushButton_2:hover {
+    background-color: rgba(127, 255, 212, 0.4) !important; /* 悬停状态背景颜色，透明度为 0.4 */
+}</string>
+       </property>
+       <property name="text">
+        <string>开启/关闭标注工具</string>
        </property>
       </widget>
      </item>

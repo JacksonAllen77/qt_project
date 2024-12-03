@@ -14,6 +14,11 @@ MainWindow::MainWindow(QWidget *parent)
     m2 = new pathchannel(this);
     m3 = new boatchannel(this);
 
+    // 使用 QPixmap 加载资源图片
+    QPixmap pixmap(":/images/icons/helloworld.png");
+    ui->label->setPixmap(pixmap.scaled(ui->label->size(), Qt::KeepAspectRatio, Qt::SmoothTransformation));
+    ui->label->setScaledContents(true);
+
 
     // 初始化 ROS
     int argc = 0;

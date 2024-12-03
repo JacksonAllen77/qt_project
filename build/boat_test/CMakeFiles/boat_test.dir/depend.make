@@ -801,6 +801,7 @@ boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /opt/ros/noetic/include
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /opt/ros/noetic/include/std_msgs/Float32.h
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcValue.h
+boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QFile
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QFlags
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonValue
@@ -810,6 +811,7 @@ boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-lin
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QSharedDataPointer
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QTextStream
+boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QUrl
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QVector
@@ -821,6 +823,7 @@ boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-lin
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_cxx11.h
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_msvc.h
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h
+boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h
@@ -887,6 +890,7 @@ boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-lin
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qtcore-config.h
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h
+boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qurlquery.h
@@ -961,7 +965,6 @@ boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-lin
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QComboBox
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QFileDialog
-boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QFrame
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGridLayout
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGroupBox
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout
@@ -971,7 +974,6 @@ boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-lin
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton
-boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSpacerItem
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStatusBar
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
@@ -1564,7 +1566,6 @@ boat_test/CMakeFiles/boat_test.dir/src/pathchannel.cpp.o: /usr/include/x86_64-li
 boat_test/CMakeFiles/boat_test.dir/src/pathchannel.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWebEngineWidgets/qwebenginepage.h
 boat_test/CMakeFiles/boat_test.dir/src/pathchannel.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWebEngineWidgets/qwebengineview.h
 boat_test/CMakeFiles/boat_test.dir/src/pathchannel.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication
-boat_test/CMakeFiles/boat_test.dir/src/pathchannel.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QFrame
 boat_test/CMakeFiles/boat_test.dir/src/pathchannel.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout
 boat_test/CMakeFiles/boat_test.dir/src/pathchannel.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel
 boat_test/CMakeFiles/boat_test.dir/src/pathchannel.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit

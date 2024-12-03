@@ -59,6 +59,7 @@ include boat_test/CMakeFiles/boat_test.dir/flags.make
 
 boat_test/qrc_images.cpp: /home/ro/boat_test/src/boat_test/src/icons/Just.jpg
 boat_test/qrc_images.cpp: /home/ro/boat_test/src/boat_test/src/icons/Just.png
+boat_test/qrc_images.cpp: /home/ro/boat_test/src/boat_test/src/icons/helloworld.png
 boat_test/qrc_images.cpp: boat_test/src/images.qrc.depends
 boat_test/qrc_images.cpp: /home/ro/boat_test/src/boat_test/src/images.qrc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/ro/boat_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating qrc_images.cpp"

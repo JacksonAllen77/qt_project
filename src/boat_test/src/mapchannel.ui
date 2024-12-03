@@ -24,39 +24,13 @@
      </rect>
     </property>
    </widget>
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QWidget" name="widget_2" native="true">
     <property name="geometry">
      <rect>
-      <x>710</x>
+      <x>0</x>
       <y>0</y>
-      <width>82</width>
-      <height>68</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QPushButton" name="pushButton_2">
-       <property name="text">
-        <string>清除轨迹</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_3">
-       <property name="text">
-        <string>保存轨迹</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>0</y>
-      <width>691</width>
-      <height>61</height>
+      <width>701</width>
+      <height>71</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
@@ -110,8 +84,61 @@
      </item>
      <item>
       <widget class="QPushButton" name="pushButton">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#pushButton {
+    background-color: rgb(255, 255, 255) !important; /* 默认背景颜色 */
+}
+
+QPushButton#pushButton:hover {
+    background-color: rgba(127, 255, 212, 0.4) !important; /* 悬停状态背景颜色，透明度为 0.4 */
+}</string>
+       </property>
        <property name="text">
         <string>返回主界面</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="widget_3" native="true">
+    <property name="geometry">
+     <rect>
+      <x>700</x>
+      <y>0</y>
+      <width>101</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#pushButton_2 {
+    background-color: rgb(255, 255, 255) !important; /* 默认背景颜色 */
+}
+
+QPushButton#pushButton_2:hover {
+    background-color: rgba(127, 255, 212, 0.4) !important; /* 悬停状态背景颜色，透明度为 0.4 */
+}</string>
+       </property>
+       <property name="text">
+        <string>清除轨迹</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#pushButton_3 {
+    background-color: rgb(255, 255, 255) !important; /* 默认背景颜色 */
+}
+
+QPushButton#pushButton_3:hover {
+    background-color: rgba(127, 255, 212, 0.4) !important; /* 悬停状态背景颜色，透明度为 0.4 */
+}</string>
+       </property>
+       <property name="text">
+        <string>保存轨迹</string>
        </property>
       </widget>
      </item>

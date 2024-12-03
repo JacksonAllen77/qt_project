@@ -802,6 +802,7 @@ boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o
  /opt/ros/noetic/include/std_msgs/Float32.h
  /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
  /opt/ros/noetic/include/xmlrpcpp/XmlRpcValue.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QFile
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QFlags
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonValue
@@ -811,6 +812,7 @@ boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QSharedDataPointer
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTextStream
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QUrl
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVector
@@ -822,6 +824,7 @@ boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_cxx11.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_msvc.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasictimer.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearray.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qchar.h
@@ -888,6 +891,7 @@ boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtcore-config.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qtimer.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qurlquery.h
@@ -962,7 +966,6 @@ boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QComboBox
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QFileDialog
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QFrame
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGridLayout
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QGroupBox
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout
@@ -972,7 +975,6 @@ boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSpacerItem
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStatusBar
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
@@ -1565,7 +1567,6 @@ boat_test/CMakeFiles/boat_test.dir/src/pathchannel.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWebEngineWidgets/qwebenginepage.h
  /usr/include/x86_64-linux-gnu/qt5/QtWebEngineWidgets/qwebengineview.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QFrame
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLineEdit
