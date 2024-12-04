@@ -169,9 +169,22 @@ boat_test/CMakeFiles/boat_test.dir/src/boatchannel.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/boat_test.dir/src/boatchannel.cpp.s"
 	cd /home/ro/boat_test/build/boat_test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ro/boat_test/src/boat_test/src/boatchannel.cpp -o CMakeFiles/boat_test.dir/src/boatchannel.cpp.s
 
+boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.o: boat_test/CMakeFiles/boat_test.dir/flags.make
+boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.o: /home/ro/boat_test/src/boat_test/src/speedmeterwidget.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ro/boat_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.o"
+	cd /home/ro/boat_test/build/boat_test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.o -c /home/ro/boat_test/src/boat_test/src/speedmeterwidget.cpp
+
+boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.i"
+	cd /home/ro/boat_test/build/boat_test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ro/boat_test/src/boat_test/src/speedmeterwidget.cpp > CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.i
+
+boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.s"
+	cd /home/ro/boat_test/build/boat_test && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ro/boat_test/src/boat_test/src/speedmeterwidget.cpp -o CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.s
+
 boat_test/CMakeFiles/boat_test.dir/qrc_images.cpp.o: boat_test/CMakeFiles/boat_test.dir/flags.make
 boat_test/CMakeFiles/boat_test.dir/qrc_images.cpp.o: boat_test/qrc_images.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ro/boat_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object boat_test/CMakeFiles/boat_test.dir/qrc_images.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ro/boat_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object boat_test/CMakeFiles/boat_test.dir/qrc_images.cpp.o"
 	cd /home/ro/boat_test/build/boat_test && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/boat_test.dir/qrc_images.cpp.o -c /home/ro/boat_test/build/boat_test/qrc_images.cpp
 
 boat_test/CMakeFiles/boat_test.dir/qrc_images.cpp.i: cmake_force
@@ -192,6 +205,7 @@ boat_test_OBJECTS = \
 "CMakeFiles/boat_test.dir/src/passid.cpp.o" \
 "CMakeFiles/boat_test.dir/src/pathchannel.cpp.o" \
 "CMakeFiles/boat_test.dir/src/boatchannel.cpp.o" \
+"CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.o" \
 "CMakeFiles/boat_test.dir/qrc_images.cpp.o"
 
 # External object files for target boat_test
@@ -205,6 +219,7 @@ boat_test_EXTERNAL_OBJECTS =
 /home/ro/boat_test/devel/lib/boat_test/boat_test: boat_test/CMakeFiles/boat_test.dir/src/passid.cpp.o
 /home/ro/boat_test/devel/lib/boat_test/boat_test: boat_test/CMakeFiles/boat_test.dir/src/pathchannel.cpp.o
 /home/ro/boat_test/devel/lib/boat_test/boat_test: boat_test/CMakeFiles/boat_test.dir/src/boatchannel.cpp.o
+/home/ro/boat_test/devel/lib/boat_test/boat_test: boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.o
 /home/ro/boat_test/devel/lib/boat_test/boat_test: boat_test/CMakeFiles/boat_test.dir/qrc_images.cpp.o
 /home/ro/boat_test/devel/lib/boat_test/boat_test: boat_test/CMakeFiles/boat_test.dir/build.make
 /home/ro/boat_test/devel/lib/boat_test/boat_test: /opt/ros/noetic/lib/libcv_bridge.so
@@ -285,7 +300,7 @@ boat_test_EXTERNAL_OBJECTS =
 /home/ro/boat_test/devel/lib/boat_test/boat_test: /usr/lib/x86_64-linux-gnu/libQt5Network.so.5.12.8
 /home/ro/boat_test/devel/lib/boat_test/boat_test: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8
 /home/ro/boat_test/devel/lib/boat_test/boat_test: boat_test/CMakeFiles/boat_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ro/boat_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable /home/ro/boat_test/devel/lib/boat_test/boat_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ro/boat_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable /home/ro/boat_test/devel/lib/boat_test/boat_test"
 	cd /home/ro/boat_test/build/boat_test && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/boat_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

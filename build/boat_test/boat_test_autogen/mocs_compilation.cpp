@@ -5,3 +5,4 @@
 #include "UVLADIE3JM/moc_mapchannel.cpp"
 #include "UVLADIE3JM/moc_passid.cpp"
 #include "UVLADIE3JM/moc_pathchannel.cpp"
+#include "UVLADIE3JM/moc_speedmeterwidget.cpp"

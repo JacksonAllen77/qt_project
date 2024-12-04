@@ -31,7 +31,9 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
+    QVBoxLayout *verticalLayout_3;
     QWidget *widget_3;
+    QHBoxLayout *horizontalLayout_4;
     QLabel *label;
     QWidget *widget_2;
     QHBoxLayout *horizontalLayout;
@@ -40,6 +42,13 @@ public:
     QPushButton *pushButton_2;
     QPushButton *pushButton_5;
     QPushButton *pushButton_4;
+    QWidget *widget_8;
+    QHBoxLayout *horizontalLayout_3;
+    QWebEngineView *widget;
+    QWidget *widget_7;
+    QVBoxLayout *verticalLayout_2;
+    QWidget *widget_5;
+    QWidget *widget_6;
     QWidget *widget_4;
     QHBoxLayout *horizontalLayout_2;
     QGroupBox *groupBox_3;
@@ -86,13 +95,6 @@ public:
     QLabel *label_10;
     QLabel *label_16;
     QLabel *label_3;
-    QWidget *widget_8;
-    QHBoxLayout *horizontalLayout_3;
-    QWebEngineView *widget;
-    QWidget *widget_7;
-    QVBoxLayout *verticalLayout_2;
-    QWidget *widget_5;
-    QWidget *widget_6;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -100,22 +102,34 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(800, 599);
-        MainWindow->setMinimumSize(QSize(800, 300));
+        MainWindow->resize(1000, 1000);
+        MainWindow->setMinimumSize(QSize(1000, 1000));
+        MainWindow->setMaximumSize(QSize(1000, 1000));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
+        verticalLayout_3 = new QVBoxLayout(centralwidget);
+        verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
         widget_3 = new QWidget(centralwidget);
         widget_3->setObjectName(QString::fromUtf8("widget_3"));
-        widget_3->setGeometry(QRect(0, 0, 800, 70));
+        widget_3->setMinimumSize(QSize(0, 80));
+        widget_3->setMaximumSize(QSize(16777215, 80));
+        horizontalLayout_4 = new QHBoxLayout(widget_3);
+        horizontalLayout_4->setObjectName(QString::fromUtf8("horizontalLayout_4"));
         label = new QLabel(widget_3);
         label->setObjectName(QString::fromUtf8("label"));
-        label->setGeometry(QRect(0, 0, 260, 70));
-        label->setMinimumSize(QSize(260, 70));
-        label->setMaximumSize(QSize(260, 70));
+        label->setMinimumSize(QSize(260, 0));
+        label->setMaximumSize(QSize(260, 16777215));
         label->setStyleSheet(QString::fromUtf8(""));
+
+        horizontalLayout_4->addWidget(label);
+
         widget_2 = new QWidget(widget_3);
         widget_2->setObjectName(QString::fromUtf8("widget_2"));
-        widget_2->setGeometry(QRect(310, 0, 491, 61));
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(widget_2->sizePolicy().hasHeightForWidth());
+        widget_2->setSizePolicy(sizePolicy);
         horizontalLayout = new QHBoxLayout(widget_2);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         pushButton = new QPushButton(widget_2);
@@ -178,9 +192,47 @@ public:
 
         horizontalLayout->addWidget(pushButton_4);
 
+
+        horizontalLayout_4->addWidget(widget_2);
+
+
+        verticalLayout_3->addWidget(widget_3);
+
+        widget_8 = new QWidget(centralwidget);
+        widget_8->setObjectName(QString::fromUtf8("widget_8"));
+        horizontalLayout_3 = new QHBoxLayout(widget_8);
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        widget = new QWebEngineView(widget_8);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setMinimumSize(QSize(550, 330));
+        widget->setMaximumSize(QSize(550, 330));
+
+        horizontalLayout_3->addWidget(widget);
+
+        widget_7 = new QWidget(widget_8);
+        widget_7->setObjectName(QString::fromUtf8("widget_7"));
+        verticalLayout_2 = new QVBoxLayout(widget_7);
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
+        widget_5 = new QWidget(widget_7);
+        widget_5->setObjectName(QString::fromUtf8("widget_5"));
+
+        verticalLayout_2->addWidget(widget_5);
+
+        widget_6 = new QWidget(widget_7);
+        widget_6->setObjectName(QString::fromUtf8("widget_6"));
+
+        verticalLayout_2->addWidget(widget_6);
+
+
+        horizontalLayout_3->addWidget(widget_7);
+
+
+        verticalLayout_3->addWidget(widget_8);
+
         widget_4 = new QWidget(centralwidget);
         widget_4->setObjectName(QString::fromUtf8("widget_4"));
-        widget_4->setGeometry(QRect(0, 360, 800, 190));
+        widget_4->setMinimumSize(QSize(0, 250));
+        widget_4->setMaximumSize(QSize(16777215, 250));
         horizontalLayout_2 = new QHBoxLayout(widget_4);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         groupBox_3 = new QGroupBox(widget_4);
@@ -425,43 +477,13 @@ public:
 
         horizontalLayout_2->addWidget(groupBox);
 
-        widget_8 = new QWidget(centralwidget);
-        widget_8->setObjectName(QString::fromUtf8("widget_8"));
-        widget_8->setGeometry(QRect(0, 60, 800, 311));
-        horizontalLayout_3 = new QHBoxLayout(widget_8);
-        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
-        widget = new QWebEngineView(widget_8);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setMinimumSize(QSize(550, 300));
-        widget->setMaximumSize(QSize(550, 300));
 
-        horizontalLayout_3->addWidget(widget);
-
-        widget_7 = new QWidget(widget_8);
-        widget_7->setObjectName(QString::fromUtf8("widget_7"));
-        verticalLayout_2 = new QVBoxLayout(widget_7);
-        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        widget_5 = new QWidget(widget_7);
-        widget_5->setObjectName(QString::fromUtf8("widget_5"));
-        widget_5->setMinimumSize(QSize(125, 125));
-        widget_5->setMaximumSize(QSize(125, 125));
-
-        verticalLayout_2->addWidget(widget_5);
-
-        widget_6 = new QWidget(widget_7);
-        widget_6->setObjectName(QString::fromUtf8("widget_6"));
-        widget_6->setMinimumSize(QSize(125, 125));
-        widget_6->setMaximumSize(QSize(125, 125));
-
-        verticalLayout_2->addWidget(widget_6);
-
-
-        horizontalLayout_3->addWidget(widget_7);
+        verticalLayout_3->addWidget(widget_4);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName(QString::fromUtf8("menubar"));
-        menubar->setGeometry(QRect(0, 0, 800, 27));
+        menubar->setGeometry(QRect(0, 0, 1000, 27));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName(QString::fromUtf8("statusbar"));

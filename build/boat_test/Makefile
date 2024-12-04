@@ -815,6 +815,33 @@ src/pathchannel.cpp.s:
 	cd /home/ro/boat_test/build && $(MAKE) -f boat_test/CMakeFiles/boat_test.dir/build.make boat_test/CMakeFiles/boat_test.dir/src/pathchannel.cpp.s
 .PHONY : src/pathchannel.cpp.s
 
+src/speedmeterwidget.o: src/speedmeterwidget.cpp.o
+
+.PHONY : src/speedmeterwidget.o
+
+# target to build an object file
+src/speedmeterwidget.cpp.o:
+	cd /home/ro/boat_test/build && $(MAKE) -f boat_test/CMakeFiles/boat_test.dir/build.make boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.o
+.PHONY : src/speedmeterwidget.cpp.o
+
+src/speedmeterwidget.i: src/speedmeterwidget.cpp.i
+
+.PHONY : src/speedmeterwidget.i
+
+# target to preprocess a source file
+src/speedmeterwidget.cpp.i:
+	cd /home/ro/boat_test/build && $(MAKE) -f boat_test/CMakeFiles/boat_test.dir/build.make boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.i
+.PHONY : src/speedmeterwidget.cpp.i
+
+src/speedmeterwidget.s: src/speedmeterwidget.cpp.s
+
+.PHONY : src/speedmeterwidget.s
+
+# target to generate assembly for a file
+src/speedmeterwidget.cpp.s:
+	cd /home/ro/boat_test/build && $(MAKE) -f boat_test/CMakeFiles/boat_test.dir/build.make boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.s
+.PHONY : src/speedmeterwidget.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -882,6 +909,9 @@ help:
 	@echo "... src/pathchannel.o"
 	@echo "... src/pathchannel.i"
 	@echo "... src/pathchannel.s"
+	@echo "... src/speedmeterwidget.o"
+	@echo "... src/speedmeterwidget.i"
+	@echo "... src/speedmeterwidget.s"
 .PHONY : help
 
 

@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "passid.h"
+#include "speedmeterwidget.h"
 #include <QTimer>
 #include <QDebug>
 #include <ros/ros.h>
@@ -11,6 +12,7 @@
 #include <QTextStream>
 #include <QMessageBox>
 #include <QFileDialog>
+
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent),
@@ -55,6 +57,16 @@ MainWindow::MainWindow(QWidget *parent)
 
     // 连接 PassId 类的信号到 mapchannel 的槽
     connect(passId, &PassId::saveTrackData, this, &MainWindow::saveTrackToCSV);
+
+    // 创建 SpeedMeterWidget 实例
+    SpeedMeterWidget *speedMeterWidget = new SpeedMeterWidget(this);
+
+
+
+    // 设置 SpeedMeterWidget 在 widget_3 中显示
+    speedMeterWidget->setGeometry(ui->widget_5->rect()); // 设置位置和大小
+    speedMeterWidget->setParent(ui->widget_5); // 设置父控件为 widget_3
+    speedMeterWidget->show(); // 显示 SpeedMeterWidget
 }
 
 MainWindow::~MainWindow() {
@@ -113,6 +125,12 @@ void MainWindow::boatSpeedCallback(const std_msgs::Float32::ConstPtr& msg)
 {
     // 更新航速到 QLineEdit
     ui->label_9->setText(QString::number(msg->data, 'f', 2));  // 航速
+
+    // 更新 SpeedMeterWidget 的当前速度
+    SpeedMeterWidget* speedMeterWidget = qobject_cast<SpeedMeterWidget*>(ui->widget_3->findChild<QWidget*>());
+    if (speedMeterWidget) {
+        speedMeterWidget->updateSpeed(msg->data); // 使用 ROS 接收到的速度更新仪表盘
+    }
 }
 
 void MainWindow::onBoatPosUpdated(double latitude, double longitude, double theta)

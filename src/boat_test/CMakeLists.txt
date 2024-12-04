@@ -26,6 +26,7 @@ qt5_add_resources(RESOURCES ${CMAKE_CURRENT_SOURCE_DIR}/src/images.qrc)
 
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTORCC ON)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
 set(SOURCES
@@ -36,12 +37,14 @@ set(SOURCES
     src/passid.cpp
     src/pathchannel.cpp
     src/boatchannel.cpp
+    src/speedmeterwidget.cpp
 )
 # 添加头文件
 set(HEADERS
     mapchannel.h
     pathchannel.h
     boatchannel.h
+    speedmeterwidget.h
 
 
 )

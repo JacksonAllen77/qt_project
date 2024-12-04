@@ -13,6 +13,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/boat_test.dir/src/mapchannel.cpp.o"
   "CMakeFiles/boat_test.dir/src/passid.cpp.o"
   "CMakeFiles/boat_test.dir/src/pathchannel.cpp.o"
+  "CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.o"
   "qrc_images.cpp"
 )
 
