@@ -1,0 +1,4 @@
+# Hashes of file build rules.
+2bc246a928a1f6b0c0774147aec0ec2a CMakeFiles/boat_test_autogen
+78d5816ed3cb4c582c7bea494028f181 CMakeFiles/clean_test_results
+2a4893cc0645376da3d646316f861835 qrc_images.cpp

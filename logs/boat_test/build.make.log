@@ -1,0 +1,52 @@
+[35m[1mScanning dependencies of target boat_test_autogen[0m
+[  8%] [34m[1mAutomatic MOC and UIC for target boat_test[0m
+[  8%] Built target boat_test_autogen
+[ 16%] [34m[1mGenerating qrc_images.cpp[0m
+[35m[1mScanning dependencies of target boat_test[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/boat_test.dir/src/connectchannel.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/boat_test.dir/src/mapchannel.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/boat_test.dir/src/boatchannel.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/boat_test.dir/src/mainwindow.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/boat_test.dir/qrc_images.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/boat_test.dir/boat_test_autogen/mocs_compilation.cpp.o[0m
+[ 75%] [32mBuilding CXX object CMakeFiles/boat_test.dir/src/passid.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/boat_test.dir/src/main.cpp.o[0m
+[ 91%] [32mBuilding CXX object CMakeFiles/boat_test.dir/src/pathchannel.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/ro/boat_test/devel/.private/boat_test/lib/boat_test/boat_test[0m
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 3 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 4 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 5 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 6 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 7 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 8 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 9 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 10 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 11 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 12 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 13 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 14 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 15 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 16 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 17 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 18 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 19 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 20 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 3 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 4 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 5 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 6 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 7 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 8 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 9 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 10 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 11 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 12 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 13 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 14 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 15 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 16 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 17 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 18 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 19 (>= sh_info of 3)
+/usr/bin/ld: /Qt5.15.2/5.15.2/gcc_64/lib/libQt5WebEngineCore.so.5.15.2: .dynsym local symbol at index 20 (>= sh_info of 3)
+[100%] Built target boat_test

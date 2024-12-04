@@ -1,0 +1,8 @@
+prefix=/home/ro/boat_test/devel/.private/boat_test
+
+Name: boat_test
+Description: Description of boat_test
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

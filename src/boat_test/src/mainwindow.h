@@ -32,6 +32,8 @@ private slots:
     void on_pushButton_12_clicked(); //清除工具标注痕迹
     void on_pushButton_11_clicked(); //启动(禁用)标注工具
 
+    void on_pushButton_13_clicked();
+
 private:
     Ui::MainWindow *ui;
     mapchannel *m; // 实时地图窗口

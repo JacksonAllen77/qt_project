@@ -231,8 +231,67 @@ void MainWindow::on_pushButton_11_clicked()
 }
 
 
+
+
 void MainWindow::on_pushButton_13_clicked()
 {
+    // 弹出文件选择对话框，让用户选择 CSV 文件
+    QString filePath = QFileDialog::getOpenFileName(this, "选择轨迹文件", "", "CSV Files (*.csv)");
+    if (filePath.isEmpty()) {
+        return; // 如果用户取消选择，直接返回
+    }
 
+    QFile file(filePath);
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QMessageBox::critical(this, "错误", "无法打开文件！");
+        return;
+    }
+
+    // 清除当前轨迹
+    clearMapTracks();
+
+    // 按行读取 CSV 文件内容
+    QTextStream in(&file);
+    in.setCodec("UTF-8");
+    QString header = in.readLine(); // 跳过第一行表头
+    if (!header.startsWith("Longitude,Latitude,Theta")) {
+        QMessageBox::critical(this, "错误", "CSV 文件格式不正确！");
+        return;
+    }
+
+    QList<BoatPoint> replayPoints; // 保存轨迹点的临时列表
+    while (!in.atEnd()) {
+        QString line = in.readLine();
+        QStringList parts = line.split(",");
+        if (parts.size() < 3) continue;
+
+        // 解析每一行的轨迹点
+        BoatPoint point;
+        point.longitude = parts[0].toDouble();
+        point.latitude = parts[1].toDouble();
+        point.theta = parts[2].toDouble();
+        replayPoints.append(point);
+    }
+    file.close();
+
+    if (replayPoints.isEmpty()) {
+        QMessageBox::warning(this, "提示", "CSV 文件中没有有效轨迹数据！");
+        return;
+    }
+
+    // 回放轨迹：逐点调用 JavaScript 的 `showBoatPosition` 函数
+    int replayInterval = 500; // 每 500ms 回放一个点
+    for (int i = 0; i < replayPoints.size(); ++i) {
+        const BoatPoint &point = replayPoints[i];
+        QTimer::singleShot(i * replayInterval, this, [=]() {
+            QString script = QString("showBoatPosition(%1, %2, %3);")
+            .arg(point.longitude)
+                .arg(point.latitude)
+                .arg(point.theta);
+            webEngineView->page()->runJavaScript(script);
+        });
+    }
+
+    QMessageBox::information(this, "回放完成", "轨迹回放已开始，请稍候观察地图上的变化！");
 }
 

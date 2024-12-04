@@ -268,6 +268,27 @@
             channel.objects.passId.clearTrackClicked.connect(clearTrack);
         });
 
+        // 读取 CSV 文件并回放轨迹
+         function replayTrackFromCSV(event) {
+            var file = event.target.files[0];
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                var contents = e.target.result;
+                var lines = contents.split("\n");
+                boatPoints = [];
+                for (var i = 1; i < lines.length; i++) {  // 跳过表头
+                    var parts = lines[i].split(",");
+                    if (parts.length >= 3) {
+                        var longitude = parseFloat(parts[0]);
+                        var latitude = parseFloat(parts[1]);
+                        var course = parseFloat(parts[2]);
+                        showBoatPosition(longitude, latitude, course);  // 回放轨迹
+                    }
+                }
+            };
+            reader.readAsText(file);
+        }
+
         // 保存轨迹为 CSV 文件
         function saveTrackToCSV() {
             if (boatPoints.length === 0) {

@@ -1,0 +1,6 @@
+devel_space: /home/ro/boat_test/devel
+install: false
+install_space: /home/ro/boat_test/install
+profile: default
+source_space: /home/ro/boat_test/src
+workspace: /home/ro/boat_test

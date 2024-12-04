@@ -1,0 +1,6 @@
+boat_test
+/home/ro/boat_test/devel/.private/boat_test/cmake.lock /home/ro/boat_test/devel/./cmake.lock
+/home/ro/boat_test/devel/.private/boat_test/lib/pkgconfig/boat_test.pc /home/ro/boat_test/devel/lib/pkgconfig/boat_test.pc
+/home/ro/boat_test/devel/.private/boat_test/lib/boat_test/boat_test /home/ro/boat_test/devel/lib/boat_test/boat_test
+/home/ro/boat_test/devel/.private/boat_test/share/boat_test/cmake/boat_testConfig.cmake /home/ro/boat_test/devel/share/boat_test/cmake/boat_testConfig.cmake
+/home/ro/boat_test/devel/.private/boat_test/share/boat_test/cmake/boat_testConfig-version.cmake /home/ro/boat_test/devel/share/boat_test/cmake/boat_testConfig-version.cmake
