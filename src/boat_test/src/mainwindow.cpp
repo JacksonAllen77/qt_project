@@ -199,7 +199,7 @@ void MainWindow::saveTrackToCSV(const QList<BoatPoint>& boatPoints, const QStrin
 void MainWindow::on_pushButton_12_clicked()
 {
     if (isDrawing) {
-        ui->pushButton_2->setText("开启标注工具");  // 更新按钮文字
+        ui->pushButton_12->setText("开启标注工具");  // 更新按钮文字
 
         // 触发 JavaScript 代码来禁用标注工具
         webEngineView->page()->runJavaScript("document.getElementById('toggleDrawingBtn').click();");
@@ -210,7 +210,7 @@ void MainWindow::on_pushButton_12_clicked()
 
         isDrawing = false;
     } else {
-        ui->pushButton_2->setText("关闭标注工具");  // 更新按钮文字
+        ui->pushButton_12->setText("关闭标注工具");  // 更新按钮文字
 
         // 触发 JavaScript 代码来启用标注工具
         webEngineView->page()->runJavaScript("document.getElementById('toggleDrawingBtn').click();");
