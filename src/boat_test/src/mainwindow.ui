@@ -180,13 +180,137 @@
      </rect>
     </property>
     <property name="title">
-     <string>状态设置</string>
+     <string>地图操作/状态设置</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
     </property>
     <layout class="QGridLayout" name="gridLayout_2">
-     <item row="0" column="0">
+     <item row="2" column="3">
+      <widget class="QLineEdit" name="lineEdit_3">
+       <property name="minimumSize">
+        <size>
+         <width>75</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>75</width>
+         <height>16777215</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="2">
+      <widget class="QLineEdit" name="lineEdit_2">
+       <property name="minimumSize">
+        <size>
+         <width>75</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>75</width>
+         <height>16777215</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2" colspan="2">
+      <widget class="QPushButton" name="pushButton_12">
+       <property name="text">
+        <string>开启/关闭标注工具</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="QLineEdit" name="lineEdit_5">
+       <property name="minimumSize">
+        <size>
+         <width>75</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>75</width>
+         <height>16777215</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="2">
+      <widget class="QLabel" name="label_20">
+       <property name="text">
+        <string>到点误差：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_21">
+       <property name="text">
+        <string>巡航速度：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="lineEdit_4">
+       <property name="minimumSize">
+        <size>
+         <width>75</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>75</width>
+         <height>16777215</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="3">
+      <widget class="QLineEdit" name="lineEdit_7">
+       <property name="minimumSize">
+        <size>
+         <width>75</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>75</width>
+         <height>16777215</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="lineEdit_6">
+       <property name="minimumSize">
+        <size>
+         <width>75</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>75</width>
+         <height>16777215</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0" colspan="2">
+      <widget class="QPushButton" name="pushButton_11">
+       <property name="text">
+        <string>清除标注工具痕迹</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
       <widget class="QLabel" name="label_18">
        <property name="minimumSize">
         <size>
@@ -205,132 +329,43 @@
        </property>
       </widget>
      </item>
-     <item row="0" column="1">
-      <widget class="QLineEdit" name="lineEdit">
-       <property name="minimumSize">
-        <size>
-         <width>75</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>75</width>
-         <height>16777215</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="2">
-      <widget class="QLineEdit" name="lineEdit_2">
-       <property name="minimumSize">
-        <size>
-         <width>75</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>75</width>
-         <height>16777215</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="3">
-      <widget class="QLineEdit" name="lineEdit_3">
-       <property name="minimumSize">
-        <size>
-         <width>75</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>75</width>
-         <height>16777215</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="0">
-      <widget class="QLabel" name="label_19">
-       <property name="text">
-        <string>制导参数：</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="1">
-      <widget class="QLineEdit" name="lineEdit_4">
-       <property name="minimumSize">
-        <size>
-         <width>75</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>75</width>
-         <height>16777215</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="2">
-      <widget class="QLabel" name="label_20">
-       <property name="text">
-        <string>到点误差：</string>
-       </property>
-      </widget>
-     </item>
-     <item row="1" column="3">
-      <widget class="QLineEdit" name="lineEdit_5">
-       <property name="minimumSize">
-        <size>
-         <width>75</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>75</width>
-         <height>16777215</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="0">
-      <widget class="QLabel" name="label_21">
-       <property name="text">
-        <string>巡航速度：</string>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="1">
-      <widget class="QLineEdit" name="lineEdit_6">
-       <property name="minimumSize">
-        <size>
-         <width>75</width>
-         <height>0</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>75</width>
-         <height>16777215</height>
-        </size>
-       </property>
-      </widget>
-     </item>
-     <item row="2" column="2">
+     <item row="4" column="2">
       <widget class="QLabel" name="label_22">
        <property name="text">
         <string>返航速度:</string>
        </property>
       </widget>
      </item>
-     <item row="2" column="3">
-      <widget class="QLineEdit" name="lineEdit_7">
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pushButton_6">
+       <property name="text">
+        <string>清除轨迹</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="pushButton_13">
+       <property name="text">
+        <string>回放轨迹</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_19">
+       <property name="text">
+        <string>制导参数：</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="pushButton_10">
+       <property name="text">
+        <string>保存轨迹</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="lineEdit">
        <property name="minimumSize">
         <size>
          <width>75</width>
@@ -377,6 +412,11 @@
          <height>20</height>
         </size>
        </property>
+       <item>
+        <property name="text">
+         <string>COM1</string>
+        </property>
+       </item>
       </widget>
      </item>
      <item>
@@ -393,6 +433,11 @@
          <height>20</height>
         </size>
        </property>
+       <item>
+        <property name="text">
+         <string>9600</string>
+        </property>
+       </item>
       </widget>
      </item>
      <item>
@@ -410,7 +455,7 @@
         </size>
        </property>
        <property name="text">
-        <string>PushButton</string>
+        <string>搜索端口</string>
        </property>
       </widget>
      </item>
@@ -429,7 +474,7 @@
         </size>
        </property>
        <property name="text">
-        <string>PushButton</string>
+        <string>打开串口</string>
        </property>
       </widget>
      </item>

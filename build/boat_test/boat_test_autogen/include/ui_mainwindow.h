@@ -53,18 +53,23 @@ public:
     QLabel *label_17;
     QGroupBox *groupBox_2;
     QGridLayout *gridLayout_2;
-    QLabel *label_18;
-    QLineEdit *lineEdit;
-    QLineEdit *lineEdit_2;
     QLineEdit *lineEdit_3;
-    QLabel *label_19;
-    QLineEdit *lineEdit_4;
-    QLabel *label_20;
+    QLineEdit *lineEdit_2;
+    QPushButton *pushButton_12;
     QLineEdit *lineEdit_5;
+    QLabel *label_20;
     QLabel *label_21;
-    QLineEdit *lineEdit_6;
-    QLabel *label_22;
+    QLineEdit *lineEdit_4;
     QLineEdit *lineEdit_7;
+    QLineEdit *lineEdit_6;
+    QPushButton *pushButton_11;
+    QLabel *label_18;
+    QLabel *label_22;
+    QPushButton *pushButton_6;
+    QPushButton *pushButton_13;
+    QLabel *label_19;
+    QPushButton *pushButton_10;
+    QLineEdit *lineEdit;
     QGroupBox *groupBox_3;
     QVBoxLayout *verticalLayout;
     QComboBox *comboBox;
@@ -188,81 +193,106 @@ public:
         groupBox_2->setAlignment(Qt::AlignCenter);
         gridLayout_2 = new QGridLayout(groupBox_2);
         gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
-        label_18 = new QLabel(groupBox_2);
-        label_18->setObjectName(QString::fromUtf8("label_18"));
-        label_18->setMinimumSize(QSize(30, 0));
-        label_18->setMaximumSize(QSize(30, 16777215));
+        lineEdit_3 = new QLineEdit(groupBox_2);
+        lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
+        lineEdit_3->setMinimumSize(QSize(75, 0));
+        lineEdit_3->setMaximumSize(QSize(75, 16777215));
 
-        gridLayout_2->addWidget(label_18, 0, 0, 1, 1);
-
-        lineEdit = new QLineEdit(groupBox_2);
-        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
-        lineEdit->setMinimumSize(QSize(75, 0));
-        lineEdit->setMaximumSize(QSize(75, 16777215));
-
-        gridLayout_2->addWidget(lineEdit, 0, 1, 1, 1);
+        gridLayout_2->addWidget(lineEdit_3, 2, 3, 1, 1);
 
         lineEdit_2 = new QLineEdit(groupBox_2);
         lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
         lineEdit_2->setMinimumSize(QSize(75, 0));
         lineEdit_2->setMaximumSize(QSize(75, 16777215));
 
-        gridLayout_2->addWidget(lineEdit_2, 0, 2, 1, 1);
+        gridLayout_2->addWidget(lineEdit_2, 2, 2, 1, 1);
 
-        lineEdit_3 = new QLineEdit(groupBox_2);
-        lineEdit_3->setObjectName(QString::fromUtf8("lineEdit_3"));
-        lineEdit_3->setMinimumSize(QSize(75, 0));
-        lineEdit_3->setMaximumSize(QSize(75, 16777215));
+        pushButton_12 = new QPushButton(groupBox_2);
+        pushButton_12->setObjectName(QString::fromUtf8("pushButton_12"));
 
-        gridLayout_2->addWidget(lineEdit_3, 0, 3, 1, 1);
-
-        label_19 = new QLabel(groupBox_2);
-        label_19->setObjectName(QString::fromUtf8("label_19"));
-
-        gridLayout_2->addWidget(label_19, 1, 0, 1, 1);
-
-        lineEdit_4 = new QLineEdit(groupBox_2);
-        lineEdit_4->setObjectName(QString::fromUtf8("lineEdit_4"));
-        lineEdit_4->setMinimumSize(QSize(75, 0));
-        lineEdit_4->setMaximumSize(QSize(75, 16777215));
-
-        gridLayout_2->addWidget(lineEdit_4, 1, 1, 1, 1);
-
-        label_20 = new QLabel(groupBox_2);
-        label_20->setObjectName(QString::fromUtf8("label_20"));
-
-        gridLayout_2->addWidget(label_20, 1, 2, 1, 1);
+        gridLayout_2->addWidget(pushButton_12, 1, 2, 1, 2);
 
         lineEdit_5 = new QLineEdit(groupBox_2);
         lineEdit_5->setObjectName(QString::fromUtf8("lineEdit_5"));
         lineEdit_5->setMinimumSize(QSize(75, 0));
         lineEdit_5->setMaximumSize(QSize(75, 16777215));
 
-        gridLayout_2->addWidget(lineEdit_5, 1, 3, 1, 1);
+        gridLayout_2->addWidget(lineEdit_5, 3, 3, 1, 1);
+
+        label_20 = new QLabel(groupBox_2);
+        label_20->setObjectName(QString::fromUtf8("label_20"));
+
+        gridLayout_2->addWidget(label_20, 3, 2, 1, 1);
 
         label_21 = new QLabel(groupBox_2);
         label_21->setObjectName(QString::fromUtf8("label_21"));
 
-        gridLayout_2->addWidget(label_21, 2, 0, 1, 1);
+        gridLayout_2->addWidget(label_21, 4, 0, 1, 1);
 
-        lineEdit_6 = new QLineEdit(groupBox_2);
-        lineEdit_6->setObjectName(QString::fromUtf8("lineEdit_6"));
-        lineEdit_6->setMinimumSize(QSize(75, 0));
-        lineEdit_6->setMaximumSize(QSize(75, 16777215));
+        lineEdit_4 = new QLineEdit(groupBox_2);
+        lineEdit_4->setObjectName(QString::fromUtf8("lineEdit_4"));
+        lineEdit_4->setMinimumSize(QSize(75, 0));
+        lineEdit_4->setMaximumSize(QSize(75, 16777215));
 
-        gridLayout_2->addWidget(lineEdit_6, 2, 1, 1, 1);
-
-        label_22 = new QLabel(groupBox_2);
-        label_22->setObjectName(QString::fromUtf8("label_22"));
-
-        gridLayout_2->addWidget(label_22, 2, 2, 1, 1);
+        gridLayout_2->addWidget(lineEdit_4, 3, 1, 1, 1);
 
         lineEdit_7 = new QLineEdit(groupBox_2);
         lineEdit_7->setObjectName(QString::fromUtf8("lineEdit_7"));
         lineEdit_7->setMinimumSize(QSize(75, 0));
         lineEdit_7->setMaximumSize(QSize(75, 16777215));
 
-        gridLayout_2->addWidget(lineEdit_7, 2, 3, 1, 1);
+        gridLayout_2->addWidget(lineEdit_7, 4, 3, 1, 1);
+
+        lineEdit_6 = new QLineEdit(groupBox_2);
+        lineEdit_6->setObjectName(QString::fromUtf8("lineEdit_6"));
+        lineEdit_6->setMinimumSize(QSize(75, 0));
+        lineEdit_6->setMaximumSize(QSize(75, 16777215));
+
+        gridLayout_2->addWidget(lineEdit_6, 4, 1, 1, 1);
+
+        pushButton_11 = new QPushButton(groupBox_2);
+        pushButton_11->setObjectName(QString::fromUtf8("pushButton_11"));
+
+        gridLayout_2->addWidget(pushButton_11, 1, 0, 1, 2);
+
+        label_18 = new QLabel(groupBox_2);
+        label_18->setObjectName(QString::fromUtf8("label_18"));
+        label_18->setMinimumSize(QSize(30, 0));
+        label_18->setMaximumSize(QSize(30, 16777215));
+
+        gridLayout_2->addWidget(label_18, 2, 0, 1, 1);
+
+        label_22 = new QLabel(groupBox_2);
+        label_22->setObjectName(QString::fromUtf8("label_22"));
+
+        gridLayout_2->addWidget(label_22, 4, 2, 1, 1);
+
+        pushButton_6 = new QPushButton(groupBox_2);
+        pushButton_6->setObjectName(QString::fromUtf8("pushButton_6"));
+
+        gridLayout_2->addWidget(pushButton_6, 0, 0, 1, 1);
+
+        pushButton_13 = new QPushButton(groupBox_2);
+        pushButton_13->setObjectName(QString::fromUtf8("pushButton_13"));
+
+        gridLayout_2->addWidget(pushButton_13, 0, 2, 1, 1);
+
+        label_19 = new QLabel(groupBox_2);
+        label_19->setObjectName(QString::fromUtf8("label_19"));
+
+        gridLayout_2->addWidget(label_19, 3, 0, 1, 1);
+
+        pushButton_10 = new QPushButton(groupBox_2);
+        pushButton_10->setObjectName(QString::fromUtf8("pushButton_10"));
+
+        gridLayout_2->addWidget(pushButton_10, 0, 1, 1, 1);
+
+        lineEdit = new QLineEdit(groupBox_2);
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        lineEdit->setMinimumSize(QSize(75, 0));
+        lineEdit->setMaximumSize(QSize(75, 16777215));
+
+        gridLayout_2->addWidget(lineEdit, 2, 1, 1, 1);
 
         groupBox_3 = new QGroupBox(centralwidget);
         groupBox_3->setObjectName(QString::fromUtf8("groupBox_3"));
@@ -271,6 +301,7 @@ public:
         verticalLayout = new QVBoxLayout(groupBox_3);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         comboBox = new QComboBox(groupBox_3);
+        comboBox->addItem(QString());
         comboBox->setObjectName(QString::fromUtf8("comboBox"));
         comboBox->setMinimumSize(QSize(0, 20));
         comboBox->setMaximumSize(QSize(16777215, 20));
@@ -278,6 +309,7 @@ public:
         verticalLayout->addWidget(comboBox);
 
         comboBox_2 = new QComboBox(groupBox_3);
+        comboBox_2->addItem(QString());
         comboBox_2->setObjectName(QString::fromUtf8("comboBox_2"));
         comboBox_2->setMinimumSize(QSize(0, 20));
         comboBox_2->setMaximumSize(QSize(16777215, 20));
@@ -405,15 +437,24 @@ public:
         label_15->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
         label_16->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
         label_17->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));
-        groupBox_2->setTitle(QApplication::translate("MainWindow", "\347\212\266\346\200\201\350\256\276\347\275\256", nullptr));
-        label_18->setText(QApplication::translate("MainWindow", "PID:", nullptr));
-        label_19->setText(QApplication::translate("MainWindow", "\345\210\266\345\257\274\345\217\202\346\225\260\357\274\232", nullptr));
+        groupBox_2->setTitle(QApplication::translate("MainWindow", "\345\234\260\345\233\276\346\223\215\344\275\234/\347\212\266\346\200\201\350\256\276\347\275\256", nullptr));
+        pushButton_12->setText(QApplication::translate("MainWindow", "\345\274\200\345\220\257/\345\205\263\351\227\255\346\240\207\346\263\250\345\267\245\345\205\267", nullptr));
         label_20->setText(QApplication::translate("MainWindow", "\345\210\260\347\202\271\350\257\257\345\267\256\357\274\232", nullptr));
         label_21->setText(QApplication::translate("MainWindow", "\345\267\241\350\210\252\351\200\237\345\272\246\357\274\232", nullptr));
+        pushButton_11->setText(QApplication::translate("MainWindow", "\346\270\205\351\231\244\346\240\207\346\263\250\345\267\245\345\205\267\347\227\225\350\277\271", nullptr));
+        label_18->setText(QApplication::translate("MainWindow", "PID:", nullptr));
         label_22->setText(QApplication::translate("MainWindow", "\350\277\224\350\210\252\351\200\237\345\272\246:", nullptr));
+        pushButton_6->setText(QApplication::translate("MainWindow", "\346\270\205\351\231\244\350\275\250\350\277\271", nullptr));
+        pushButton_13->setText(QApplication::translate("MainWindow", "\345\233\236\346\224\276\350\275\250\350\277\271", nullptr));
+        label_19->setText(QApplication::translate("MainWindow", "\345\210\266\345\257\274\345\217\202\346\225\260\357\274\232", nullptr));
+        pushButton_10->setText(QApplication::translate("MainWindow", "\344\277\235\345\255\230\350\275\250\350\277\271", nullptr));
         groupBox_3->setTitle(QApplication::translate("MainWindow", "\347\212\266\346\200\201\350\256\276\347\275\256", nullptr));
-        pushButton_7->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
-        pushButton_8->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
+        comboBox->setItemText(0, QApplication::translate("MainWindow", "COM1", nullptr));
+
+        comboBox_2->setItemText(0, QApplication::translate("MainWindow", "9600", nullptr));
+
+        pushButton_7->setText(QApplication::translate("MainWindow", "\346\220\234\347\264\242\347\253\257\345\217\243", nullptr));
+        pushButton_8->setText(QApplication::translate("MainWindow", "\346\211\223\345\274\200\344\270\262\345\217\243", nullptr));
         pushButton_9->setText(QApplication::translate("MainWindow", "PushButton", nullptr));
         pushButton->setText(QApplication::translate("MainWindow", "\345\234\260\345\233\276\345\257\274\350\210\252\347\225\214\351\235\242", nullptr));
         pushButton_3->setText(QApplication::translate("MainWindow", "\350\267\257\345\276\204\350\247\204\345\210\222\347\225\214\351\235\242", nullptr));
