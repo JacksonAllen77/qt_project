@@ -60,6 +60,7 @@ private:
     void clearMapTracks();
     void clearBoatMarker();
     void onBoatPosUpdated(double latitude, double longitude, double theta);
+    void SpeedCallback(const std_msgs::Float32::ConstPtr& msg);
 
 };
 

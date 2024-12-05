@@ -2,6 +2,9 @@
 #include <QPainter>
 #include <QTimer>
 #include <QtMath>
+#include <ros/ros.h>
+#include <std_msgs/Float32.h>
+
 
 SpeedMeterWidget::SpeedMeterWidget(QWidget *parent)
     : QWidget(parent),
@@ -14,6 +17,15 @@ SpeedMeterWidget::SpeedMeterWidget(QWidget *parent)
     timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &SpeedMeterWidget::onTimeout);  // 每次超时更新界面
     timer->start(50);  // 50ms 定时器刷新
+
+    // 初始化 ROS 节点并订阅速度话题
+    ros::NodeHandle nh;
+    ros::Subscriber sub = nh.subscribe("speed_topic", 1000, &SpeedMeterWidget::speedCallback, this);
+
+    // 定时调用ros::spinOnce()
+    QTimer *rosTimer = new QTimer(this);
+    connect(rosTimer, &QTimer::timeout, this, []() { ros::spinOnce(); });
+    rosTimer->start(50);  // 每50ms调用一次ros::spinOnce()
 }
 
 SpeedMeterWidget::~SpeedMeterWidget()
@@ -24,7 +36,8 @@ SpeedMeterWidget::~SpeedMeterWidget()
 // 新增方法，用于更新外部传入的速度
 void SpeedMeterWidget::updateSpeed(float speed)
 {
-    currentValue = speed / 4.0;  // 假设速度单位是Km/h，乘以4对应每个刻度（根据你的实现，可能需要调整）
+    // 假设最大速度为 240，确保速度不超过最大值
+    currentValue = qMin(speed, 240.0f);  // 直接使用速度值，如果超过最大值则限制
     update();  // 更新界面
 }
 
@@ -176,4 +189,11 @@ void SpeedMeterWidget::paintEvent(QPaintEvent *event)
 void SpeedMeterWidget::onTimeout()
 {
     update();  // 每次超时调用 update 更新界面
+}
+
+// 示例：ROS速度回调函数
+void SpeedMeterWidget::speedCallback(const std_msgs::Float32::ConstPtr& msg)
+{
+    float speed = msg->data;
+    updateSpeed(speed);  // 更新速度
 }

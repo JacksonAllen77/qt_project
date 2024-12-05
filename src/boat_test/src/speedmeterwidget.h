@@ -4,6 +4,8 @@
 #include <QWidget>
 #include <QTimer>
 #include <QPainter>
+#include <ros/ros.h>
+#include <std_msgs/Float32.h>
 
 class SpeedMeterWidget : public QWidget
 {
@@ -28,6 +30,8 @@ private:
     void drawEllipseInnerShine(QPainter &painter, int radius);
     void drawEllipseOutShine(QPainter &painter, int radius);
     void drawLogo(QPainter &painter, int radius);
+    void speedCallback(const std_msgs::Float32::ConstPtr& msg); // ROS速度回调函数
+
 private slots:
     void onTimeout();  // 定时器超时处理槽
 
@@ -40,6 +44,7 @@ private:
     int mark;
     float currentValue;  // 修改为 float 类型，适应外部速度更新
     QTimer *timer;
+    ros::Subscriber speed_subscriber;  // ROS 订阅器
 };
 
 #endif // SPEEDMETERWIDGET_H

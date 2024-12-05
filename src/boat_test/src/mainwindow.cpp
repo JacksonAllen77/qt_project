@@ -63,9 +63,9 @@ MainWindow::MainWindow(QWidget *parent)
 
 
 
-    // 设置 SpeedMeterWidget 在 widget_3 中显示
+    // 设置 SpeedMeterWidget 在 widget_5 中显示
     speedMeterWidget->setGeometry(ui->widget_5->rect()); // 设置位置和大小
-    speedMeterWidget->setParent(ui->widget_5); // 设置父控件为 widget_3
+    speedMeterWidget->setParent(ui->widget_5); // 设置父控件为 widget_5
     speedMeterWidget->show(); // 显示 SpeedMeterWidget
 }
 
@@ -127,7 +127,7 @@ void MainWindow::boatSpeedCallback(const std_msgs::Float32::ConstPtr& msg)
     ui->label_9->setText(QString::number(msg->data, 'f', 2));  // 航速
 
     // 更新 SpeedMeterWidget 的当前速度
-    SpeedMeterWidget* speedMeterWidget = qobject_cast<SpeedMeterWidget*>(ui->widget_3->findChild<QWidget*>());
+    SpeedMeterWidget* speedMeterWidget = qobject_cast<SpeedMeterWidget*>(ui->widget_5->findChild<QWidget*>());
     if (speedMeterWidget) {
         speedMeterWidget->updateSpeed(msg->data); // 使用 ROS 接收到的速度更新仪表盘
     }
@@ -313,3 +313,10 @@ void MainWindow::on_pushButton_13_clicked()
     QMessageBox::information(this, "回放完成", "轨迹回放已开始，请稍候观察地图上的变化！");
 }
 
+void MainWindow::SpeedCallback(const std_msgs::Float32::ConstPtr& msg)
+{
+    SpeedMeterWidget* speedMeterWidget = qobject_cast<SpeedMeterWidget*>(ui->widget_5->findChild<QWidget*>());
+    if (speedMeterWidget) {
+        speedMeterWidget->updateSpeed(msg->data); // 使用 ROS 接收到的速度更新仪表盘
+    }
+}
