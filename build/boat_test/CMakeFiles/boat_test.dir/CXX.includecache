@@ -10,6 +10,26 @@
 QMainWindow
 -
 
+/home/ro/boat_test/src/boat_test/src/compasswidget.h
+QWidget
+-
+QTimer
+-
+QPainter
+-
+QColor
+-
+QString
+-
+QFont
+-
+QLinearGradient
+-
+ros/ros.h
+-
+std_msgs/Float32.h
+-
+
 /home/ro/boat_test/src/boat_test/src/connectchannel.h
 QMainWindow
 -
@@ -23,6 +43,8 @@ passid.h
 /home/ro/boat_test/src/boat_test/src/passid.h
 speedmeterwidget.h
 /home/ro/boat_test/src/boat_test/src/speedmeterwidget.h
+compasswidget.h
+/home/ro/boat_test/src/boat_test/src/compasswidget.h
 QTimer
 -
 QDebug
@@ -1655,6 +1677,18 @@ QtCore/qpoint.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h
 QtCore/qglobal.h
 -
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/QColor
+qcolor.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/QFont
+qfont.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qfont.h
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/QLinearGradient
+qbrush.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtGui/QPainter
 qpainter.h

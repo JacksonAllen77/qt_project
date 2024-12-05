@@ -12,7 +12,7 @@ SpeedMeterWidget::SpeedMeterWidget(QWidget *parent)
     startAngle(150),
     mark(0)
 {
-    setFixedSize(350,350); // 设置窗口大小
+    setFixedSize(400,400); // 设置窗口大小
     // 启动定时器来定时更新显示（可选）
     timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &SpeedMeterWidget::onTimeout);  // 每次超时更新界面
@@ -171,7 +171,7 @@ void SpeedMeterWidget::drawLogo(QPainter &painter, int radius)
 void SpeedMeterWidget::paintEvent(QPaintEvent *event)
 {
     QPainter painter(this);
-    int radius = height()/2;
+    int radius = height()/2.5;
     initCanvas(painter); // 初始化画布
     drawMiddleCircle(painter,60); // 绘制中间圆形
     drawScale(painter,radius); // 绘制刻度

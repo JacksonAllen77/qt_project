@@ -7,6 +7,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/ro/boat_test/build/boat_test/boat_test_autogen/mocs_compilation.cpp" "/home/ro/boat_test/build/boat_test/CMakeFiles/boat_test.dir/boat_test_autogen/mocs_compilation.cpp.o"
   "/home/ro/boat_test/build/boat_test/qrc_images.cpp" "/home/ro/boat_test/build/boat_test/CMakeFiles/boat_test.dir/qrc_images.cpp.o"
   "/home/ro/boat_test/src/boat_test/src/boatchannel.cpp" "/home/ro/boat_test/build/boat_test/CMakeFiles/boat_test.dir/src/boatchannel.cpp.o"
+  "/home/ro/boat_test/src/boat_test/src/compasswidget.cpp" "/home/ro/boat_test/build/boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o"
   "/home/ro/boat_test/src/boat_test/src/connectchannel.cpp" "/home/ro/boat_test/build/boat_test/CMakeFiles/boat_test.dir/src/connectchannel.cpp.o"
   "/home/ro/boat_test/src/boat_test/src/main.cpp" "/home/ro/boat_test/build/boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o"
   "/home/ro/boat_test/src/boat_test/src/mainwindow.cpp" "/home/ro/boat_test/build/boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o"

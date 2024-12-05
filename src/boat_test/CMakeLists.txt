@@ -38,6 +38,7 @@ set(SOURCES
     src/pathchannel.cpp
     src/boatchannel.cpp
     src/speedmeterwidget.cpp
+    src/compasswidget.cpp
 )
 # 添加头文件
 set(HEADERS
@@ -45,6 +46,7 @@ set(HEADERS
     pathchannel.h
     boatchannel.h
     speedmeterwidget.h
+    compasswidget.h
 
 
 )

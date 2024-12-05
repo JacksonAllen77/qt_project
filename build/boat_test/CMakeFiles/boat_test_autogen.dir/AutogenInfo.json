@@ -13,6 +13,11 @@
 			"UVLADIE3JM/moc_boatchannel.cpp"
 		],
 		[
+			"/home/ro/boat_test/src/boat_test/src/compasswidget.h",
+			"MU",
+			"UVLADIE3JM/moc_compasswidget.cpp"
+		],
+		[
 			"/home/ro/boat_test/src/boat_test/src/connectchannel.h",
 			"MU",
 			"UVLADIE3JM/moc_connectchannel.cpp"
@@ -122,6 +127,7 @@
 	"SOURCES" : 
 	[
 		[ "/home/ro/boat_test/src/boat_test/src/boatchannel.cpp", "MU" ],
+		[ "/home/ro/boat_test/src/boat_test/src/compasswidget.cpp", "MU" ],
 		[ "/home/ro/boat_test/src/boat_test/src/connectchannel.cpp", "MU" ],
 		[ "/home/ro/boat_test/src/boat_test/src/main.cpp", "MU" ],
 		[ "/home/ro/boat_test/src/boat_test/src/mainwindow.cpp", "MU" ],

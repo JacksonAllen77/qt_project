@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/boat_test.dir/boat_test_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/boat_test.dir/qrc_images.cpp.o"
   "CMakeFiles/boat_test.dir/src/boatchannel.cpp.o"
+  "CMakeFiles/boat_test.dir/src/compasswidget.cpp.o"
   "CMakeFiles/boat_test.dir/src/connectchannel.cpp.o"
   "CMakeFiles/boat_test.dir/src/main.cpp.o"
   "CMakeFiles/boat_test.dir/src/mainwindow.cpp.o"

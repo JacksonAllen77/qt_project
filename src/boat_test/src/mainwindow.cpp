@@ -2,6 +2,7 @@
 #include "ui_mainwindow.h"
 #include "passid.h"
 #include "speedmeterwidget.h"
+#include "compasswidget.h"
 #include <QTimer>
 #include <QDebug>
 #include <ros/ros.h>
@@ -58,8 +59,10 @@ MainWindow::MainWindow(QWidget *parent)
     // 连接 PassId 类的信号到 mapchannel 的槽
     connect(passId, &PassId::saveTrackData, this, &MainWindow::saveTrackToCSV);
 
-    // 创建 SpeedMeterWidget 实例
+    // 创建 SpeedMeterWidget(速度仪表盘) 实例
     SpeedMeterWidget *speedMeterWidget = new SpeedMeterWidget(this);
+    // 创建 CompassWidget(罗盘仪表盘) 实例
+    CompassWidget *compassWidget = new CompassWidget(this);
 
 
 
@@ -67,6 +70,11 @@ MainWindow::MainWindow(QWidget *parent)
     speedMeterWidget->setGeometry(ui->widget_5->rect()); // 设置位置和大小
     speedMeterWidget->setParent(ui->widget_5); // 设置父控件为 widget_5
     speedMeterWidget->show(); // 显示 SpeedMeterWidget
+
+    // 设置 CompassWidget 在 widget_6 中显示
+    compassWidget->setGeometry(ui->widget_6->rect());
+    compassWidget->setParent(ui->widget_6);
+    compassWidget->show();
 }
 
 MainWindow::~MainWindow() {
@@ -119,6 +127,12 @@ void MainWindow::boatPositionCallback(const geometry_msgs::Pose2D::ConstPtr& msg
 
     // 保存轨迹数据到中间文件（不弹出提示框）
     saveTrackToCSV(boatPoints, tempFilePath);
+
+    // 更新 CompassWidget 的当前角度
+    CompassWidget* compassWidget = qobject_cast<CompassWidget*>(ui->widget_6->findChild<QWidget*>());
+    if (compassWidget) {
+        compassWidget->setAngle(msg->theta); // 使用 ROS 接收到的角度更新罗盘仪
+    }
 }
 
 void MainWindow::boatSpeedCallback(const std_msgs::Float32::ConstPtr& msg)

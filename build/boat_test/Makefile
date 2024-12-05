@@ -653,6 +653,33 @@ src/boatchannel.cpp.s:
 	cd /home/ro/boat_test/build && $(MAKE) -f boat_test/CMakeFiles/boat_test.dir/build.make boat_test/CMakeFiles/boat_test.dir/src/boatchannel.cpp.s
 .PHONY : src/boatchannel.cpp.s
 
+src/compasswidget.o: src/compasswidget.cpp.o
+
+.PHONY : src/compasswidget.o
+
+# target to build an object file
+src/compasswidget.cpp.o:
+	cd /home/ro/boat_test/build && $(MAKE) -f boat_test/CMakeFiles/boat_test.dir/build.make boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o
+.PHONY : src/compasswidget.cpp.o
+
+src/compasswidget.i: src/compasswidget.cpp.i
+
+.PHONY : src/compasswidget.i
+
+# target to preprocess a source file
+src/compasswidget.cpp.i:
+	cd /home/ro/boat_test/build && $(MAKE) -f boat_test/CMakeFiles/boat_test.dir/build.make boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.i
+.PHONY : src/compasswidget.cpp.i
+
+src/compasswidget.s: src/compasswidget.cpp.s
+
+.PHONY : src/compasswidget.s
+
+# target to generate assembly for a file
+src/compasswidget.cpp.s:
+	cd /home/ro/boat_test/build && $(MAKE) -f boat_test/CMakeFiles/boat_test.dir/build.make boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.s
+.PHONY : src/compasswidget.cpp.s
+
 src/connectchannel.o: src/connectchannel.cpp.o
 
 .PHONY : src/connectchannel.o
@@ -891,6 +918,9 @@ help:
 	@echo "... src/boatchannel.o"
 	@echo "... src/boatchannel.i"
 	@echo "... src/boatchannel.s"
+	@echo "... src/compasswidget.o"
+	@echo "... src/compasswidget.i"
+	@echo "... src/compasswidget.s"
 	@echo "... src/connectchannel.o"
 	@echo "... src/connectchannel.i"
 	@echo "... src/connectchannel.s"
