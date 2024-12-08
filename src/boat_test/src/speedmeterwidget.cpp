@@ -15,7 +15,7 @@ SpeedMeterWidget::SpeedMeterWidget(QWidget *parent)
     mark(0),
     hasNewData(false)   // 初始没有收到速度数据
 {
-    setFixedSize(400,400); // 设置窗口大小
+    // setFixedSize(400,400); // 设置窗口大小
 
     // 启动定时器来定时更新显示（可选）
     timer = new QTimer(this);
@@ -210,7 +210,7 @@ void SpeedMeterWidget::paintEvent(QPaintEvent *event)
     drawPointLine(painter,radius-58); // 绘制指针
     drawSpeedPie(painter,radius+25); // 绘制速度指示扇形
     drawEllipseInnerShine(painter,110); // 绘制渐变内圈
-    drawEllipseInnerBlack(painter,80); // 绘制黑色内圈
+    drawEllipseInnerBlack(painter,60); // 绘制黑色内圈
     drawCurrentSpeed(painter); // 绘制当前速度
     drawEllipseOutShine(painter,radius+25); // 绘制外圈渐变
     drawLogo(painter,radius); // 绘制 logo

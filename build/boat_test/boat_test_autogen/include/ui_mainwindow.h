@@ -204,8 +204,8 @@ public:
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         widget = new QWebEngineView(widget_8);
         widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setMinimumSize(QSize(550, 330));
-        widget->setMaximumSize(QSize(550, 330));
+        widget->setMinimumSize(QSize(600, 0));
+        widget->setMaximumSize(QSize(600, 16777215));
 
         horizontalLayout_3->addWidget(widget);
 
@@ -215,11 +215,14 @@ public:
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         widget_5 = new QWidget(widget_7);
         widget_5->setObjectName(QString::fromUtf8("widget_5"));
+        widget_5->setMinimumSize(QSize(300, 300));
+        widget_5->setMaximumSize(QSize(350, 350));
 
         verticalLayout_2->addWidget(widget_5);
 
         widget_6 = new QWidget(widget_7);
         widget_6->setObjectName(QString::fromUtf8("widget_6"));
+        widget_6->setMinimumSize(QSize(300, 300));
 
         verticalLayout_2->addWidget(widget_6);
 

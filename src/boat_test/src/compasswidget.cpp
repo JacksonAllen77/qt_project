@@ -16,7 +16,7 @@ CompassWidget::CompassWidget(QWidget *parent)
     southPointerColor(Qt::red),    // 南指针颜色
     hasNewData(false)  // 初始化为未收到新数据
 {
-    setFixedSize(400,400); // 设置窗口大小
+    // setFixedSize(400,400); // 设置窗口大小
 
     // 定时器每50毫秒更新一次
     timer = new QTimer(this);

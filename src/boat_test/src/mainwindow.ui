@@ -166,14 +166,14 @@ QPushButton#pushButton_4:hover {
         <widget class="QWebEngineView" name="widget" native="true">
          <property name="minimumSize">
           <size>
-           <width>550</width>
-           <height>330</height>
+           <width>600</width>
+           <height>0</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>550</width>
-           <height>330</height>
+           <width>600</width>
+           <height>16777215</height>
           </size>
          </property>
         </widget>
@@ -182,10 +182,30 @@ QPushButton#pushButton_4:hover {
         <widget class="QWidget" name="widget_7" native="true">
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <item>
-           <widget class="QWidget" name="widget_5" native="true"/>
+           <widget class="QWidget" name="widget_5" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>300</width>
+              <height>300</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>350</width>
+              <height>350</height>
+             </size>
+            </property>
+           </widget>
           </item>
           <item>
-           <widget class="QWidget" name="widget_6" native="true"/>
+           <widget class="QWidget" name="widget_6" native="true">
+            <property name="minimumSize">
+             <size>
+              <width>300</width>
+              <height>300</height>
+             </size>
+            </property>
+           </widget>
           </item>
          </layout>
         </widget>
