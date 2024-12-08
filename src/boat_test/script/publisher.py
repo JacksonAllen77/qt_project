@@ -11,7 +11,7 @@ def publish_boat_data():
     position_pub = rospy.Publisher('/boat_position', Pose2D, queue_size=10)
     speed_pub = rospy.Publisher('/boat_speed', Float32, queue_size=10)
 
-    # 设置发布频率为 1 Hz
+    # 设置发布频率为 5 Hz
     rate = rospy.Rate(1)
 
     # 初始化经度、纬度、艏向和速度的初始值
@@ -42,7 +42,7 @@ def publish_boat_data():
         # 模拟船只位置和速度的变化
         longitude += 0.01     # 经度增加
         latitude += 0.01      # 纬度增加
-        course = (course + 10) % 360  # 艏向角度循环变化，范围保持在 0° 到 360°
+        course = round((course + 10) % 360, 2)  # 确保角度保持高精度
         speed += 0.1          # 速度增加
 
         # 按照设定的频率发布数据

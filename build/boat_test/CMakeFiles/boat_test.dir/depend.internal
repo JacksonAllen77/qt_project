@@ -79,6 +79,7 @@ boat_test/CMakeFiles/boat_test.dir/boat_test_autogen/mocs_compilation.cpp.o
  /opt/ros/noetic/include/std_msgs/Float32.h
  /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
  /opt/ros/noetic/include/xmlrpcpp/XmlRpcValue.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QDateTime
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QFile
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QFlags
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonValue
@@ -88,6 +89,7 @@ boat_test/CMakeFiles/boat_test.dir/boat_test_autogen/mocs_compilation.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QSharedDataPointer
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTextStream
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QTime
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QUrl
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant
@@ -383,6 +385,7 @@ boat_test/CMakeFiles/boat_test.dir/src/boatchannel.cpp.o
 boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o
  /home/ro/boat_test/src/boat_test/src/compasswidget.cpp
  /home/ro/boat_test/src/boat_test/src/compasswidget.h
+ /opt/ros/noetic/include/geometry_msgs/Pose2D.h
  /opt/ros/noetic/include/ros/advertise_options.h
  /opt/ros/noetic/include/ros/advertise_service_options.h
  /opt/ros/noetic/include/ros/assert.h
@@ -439,11 +442,12 @@ boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o
  /opt/ros/noetic/include/ros/wall_timer.h
  /opt/ros/noetic/include/ros/wall_timer_options.h
  /opt/ros/noetic/include/rosconsole/macros_generated.h
- /opt/ros/noetic/include/std_msgs/Float32.h
  /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
  /opt/ros/noetic/include/xmlrpcpp/XmlRpcValue.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QSize
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QTime
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimerEvent
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
@@ -464,6 +468,7 @@ boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h
@@ -994,6 +999,7 @@ boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o
  /opt/ros/noetic/include/std_msgs/Float32.h
  /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
  /opt/ros/noetic/include/xmlrpcpp/XmlRpcValue.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QDateTime
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QFile
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QFlags
@@ -1004,6 +1010,7 @@ boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QSharedDataPointer
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTextStream
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QTime
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QUrl
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant
@@ -1857,6 +1864,8 @@ boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.o
  /opt/ros/noetic/include/std_msgs/Float32.h
  /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
  /opt/ros/noetic/include/xmlrpcpp/XmlRpcValue.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QDateTime
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QtMath
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
@@ -1877,6 +1886,7 @@ boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h

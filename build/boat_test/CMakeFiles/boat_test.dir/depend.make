@@ -78,6 +78,7 @@ boat_test/CMakeFiles/boat_test.dir/boat_test_autogen/mocs_compilation.cpp.o: /op
 boat_test/CMakeFiles/boat_test.dir/boat_test_autogen/mocs_compilation.cpp.o: /opt/ros/noetic/include/std_msgs/Float32.h
 boat_test/CMakeFiles/boat_test.dir/boat_test_autogen/mocs_compilation.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
 boat_test/CMakeFiles/boat_test.dir/boat_test_autogen/mocs_compilation.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcValue.h
+boat_test/CMakeFiles/boat_test.dir/boat_test_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QDateTime
 boat_test/CMakeFiles/boat_test.dir/boat_test_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QFile
 boat_test/CMakeFiles/boat_test.dir/boat_test_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QFlags
 boat_test/CMakeFiles/boat_test.dir/boat_test_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QJsonValue
@@ -87,6 +88,7 @@ boat_test/CMakeFiles/boat_test.dir/boat_test_autogen/mocs_compilation.cpp.o: /us
 boat_test/CMakeFiles/boat_test.dir/boat_test_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QSharedDataPointer
 boat_test/CMakeFiles/boat_test.dir/boat_test_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
 boat_test/CMakeFiles/boat_test.dir/boat_test_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QTextStream
+boat_test/CMakeFiles/boat_test.dir/boat_test_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QTime
 boat_test/CMakeFiles/boat_test.dir/boat_test_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer
 boat_test/CMakeFiles/boat_test.dir/boat_test_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QUrl
 boat_test/CMakeFiles/boat_test.dir/boat_test_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant
@@ -382,6 +384,7 @@ boat_test/CMakeFiles/boat_test.dir/src/boatchannel.cpp.o: boat_test/boat_test_au
 
 boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /home/ro/boat_test/src/boat_test/src/compasswidget.cpp
 boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /home/ro/boat_test/src/boat_test/src/compasswidget.h
+boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /opt/ros/noetic/include/geometry_msgs/Pose2D.h
 boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /opt/ros/noetic/include/ros/advertise_options.h
 boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /opt/ros/noetic/include/ros/advertise_service_options.h
 boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /opt/ros/noetic/include/ros/assert.h
@@ -438,11 +441,12 @@ boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /opt/ros/noetic/incl
 boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /opt/ros/noetic/include/ros/wall_timer.h
 boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /opt/ros/noetic/include/ros/wall_timer_options.h
 boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /opt/ros/noetic/include/rosconsole/macros_generated.h
-boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /opt/ros/noetic/include/std_msgs/Float32.h
 boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
 boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcValue.h
+boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug
 boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QSize
 boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
+boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QTime
 boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer
 boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimerEvent
 boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
@@ -463,6 +467,7 @@ boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /usr/include/x86_64-
 boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h
 boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
 boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h
+boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h
 boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
 boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h
 boat_test/CMakeFiles/boat_test.dir/src/compasswidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h
@@ -993,6 +998,7 @@ boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /opt/ros/noetic/include
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /opt/ros/noetic/include/std_msgs/Float32.h
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcValue.h
+boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QDateTime
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QFile
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QFlags
@@ -1003,6 +1009,7 @@ boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-lin
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QSharedDataPointer
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QTextStream
+boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QTime
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QUrl
 boat_test/CMakeFiles/boat_test.dir/src/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant
@@ -1856,6 +1863,8 @@ boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.o: /opt/ros/noetic/i
 boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.o: /opt/ros/noetic/include/std_msgs/Float32.h
 boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcDecl.h
 boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.o: /opt/ros/noetic/include/xmlrpcpp/XmlRpcValue.h
+boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QDateTime
+boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QDebug
 boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QTimer
 boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QtMath
 boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
@@ -1876,6 +1885,7 @@ boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.o: /usr/include/x86_
 boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h
 boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
 boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatastream.h
+boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qdatetime.h
 boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qdebug.h
 boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qfile.h
 boat_test/CMakeFiles/boat_test.dir/src/speedmeterwidget.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qfiledevice.h

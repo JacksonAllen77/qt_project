@@ -3,8 +3,9 @@
 #include <QLinearGradient>
 #include <QTimerEvent>
 #include <QSize>
+#include <QDebug>
 #include <ros/ros.h>
-#include <std_msgs/Float32.h>
+#include <geometry_msgs/Pose2D.h>
 
 CompassWidget::CompassWidget(QWidget *parent)
     : QWidget(parent),
@@ -12,23 +13,24 @@ CompassWidget::CompassWidget(QWidget *parent)
     precision(2),          // 精度
     foreground(Qt::white), // 前景色
     northPointerColor(Qt::green), // 北指针颜色
-    southPointerColor(Qt::red)    // 南指针颜色
+    southPointerColor(Qt::red),    // 南指针颜色
+    hasNewData(false)  // 初始化为未收到新数据
 {
     setFixedSize(400,400); // 设置窗口大小
 
     // 定时器每50毫秒更新一次
     timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &CompassWidget::onTimeout); // 使用新定义的槽函数
-    timer->start(50);
+    timer->start(1000);
 
     // ROS初始化
     ros::NodeHandle nh;
-    angleSub = nh.subscribe("/compass/angle", 10, &CompassWidget::angleCallback, this);
+    angleSub = nh.subscribe("/boat_position", 1, &CompassWidget::angleCallback, this);
 
     // ROS定时器
     QTimer *rosTimer = new QTimer(this);
     connect(rosTimer, &QTimer::timeout, this, []() { ros::spinOnce(); });
-    rosTimer->start(50);  // 每50ms调用一次ros::spinOnce()
+    rosTimer->start(1000);  // 每50ms调用一次ros::spinOnce()
 }
 
 CompassWidget::~CompassWidget() {
@@ -193,14 +195,31 @@ void CompassWidget::drawValue(QPainter *painter) {
     painter->restore();
 }
 
-void CompassWidget::onTimeout()
-{
-    update();  // 每次超时调用 update 更新界面
+void CompassWidget::angleCallback(const geometry_msgs::Pose2D::ConstPtr& msg) {
+    angle = msg->theta;
+    hasNewData = true;  // 收到数据，更新标志
+    lastMessageTime = QDateTime::currentDateTime(); // 更新消息时间
+    update();
 }
 
-void CompassWidget::angleCallback(const std_msgs::Float32::ConstPtr& msg) {
-    angle = msg->data;
-    update();
+void CompassWidget::onTimeout()
+{
+    QDateTime currentTime = QDateTime::currentDateTime();
+    int timeDiff = lastMessageTime.msecsTo(currentTime); // 毫秒差值
+
+    if (timeDiff > 3000) { // 超过3秒
+        if (!hasNewData) {
+            // 当没有收到新数据时，缓慢回归北方向
+            if (angle > 0.0) {
+                angle = qMax(angle - 1, 0.0);  // 每次减少 1 度，最小到 0
+            } else if (angle < 0.0) {
+                angle = qMin(angle + 1, 0.0);  // 每次增加 1 度，最大到 0
+            }
+        }
+    }
+
+    hasNewData = false;  // 重置标志，等待下次接收
+    update();            // 更新界面
 }
 
 double CompassWidget::getAngle() const {

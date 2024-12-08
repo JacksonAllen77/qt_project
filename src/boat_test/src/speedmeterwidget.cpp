@@ -4,47 +4,78 @@
 #include <QtMath>
 #include <ros/ros.h>
 #include <std_msgs/Float32.h>
+#include <QDateTime>
+#include <QDebug>
 
 
 SpeedMeterWidget::SpeedMeterWidget(QWidget *parent)
     : QWidget(parent),
     currentValue(0.0),  // 初始化为0
     startAngle(150),
-    mark(0)
+    mark(0),
+    hasNewData(false)   // 初始没有收到速度数据
 {
     setFixedSize(400,400); // 设置窗口大小
+
     // 启动定时器来定时更新显示（可选）
     timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &SpeedMeterWidget::onTimeout);  // 每次超时更新界面
-    timer->start(50);  // 50ms 定时器刷新
+    timer->start(1000);  // 1s 定时器刷新
 
     // 初始化 ROS 节点并订阅速度话题
     ros::NodeHandle nh;
-    ros::Subscriber sub = nh.subscribe("speed_topic", 1000, &SpeedMeterWidget::speedCallback, this);
+    ros::Subscriber sub = nh.subscribe("/boat_speed", 1, &SpeedMeterWidget::speedCallback, this);
 
     // 定时调用ros::spinOnce()
     QTimer *rosTimer = new QTimer(this);
     connect(rosTimer, &QTimer::timeout, this, []() { ros::spinOnce(); });
-    rosTimer->start(50);  // 每50ms调用一次ros::spinOnce()
+    rosTimer->start(1000);  // 每1s调用一次ros::spinOnce()
 }
 
 SpeedMeterWidget::~SpeedMeterWidget()
 {
-    delete timer; // 释放定时器
+    if (timer) {
+        delete timer;
+    }
 }
 
 // 新增方法，用于更新外部传入的速度
 void SpeedMeterWidget::updateSpeed(float speed)
 {
-    // 假设最大速度为 240，确保速度不超过最大值
     currentValue = qMin(speed, 240.0f);  // 直接使用速度值，如果超过最大值则限制
+    hasNewData = true;  // 设置标志为新数据
+    lastSpeedMessageTime = QDateTime::currentDateTime();  // 更新接收到消息的时间
     update();  // 更新界面
+}
+void SpeedMeterWidget::speedCallback(const std_msgs::Float32::ConstPtr& msg)
+{
+    // 获取 ROS 速度数据并更新速度
+    float speed = msg->data;
+    updateSpeed(speed);  // 调用 updateSpeed 更新显示
+}
+void SpeedMeterWidget::onTimeout()
+{
+    // 检查是否超过3秒没有接收到新速度数据
+    if (hasNewData) {
+        hasNewData = false;  // 重置标志
+    } else {
+        QDateTime currentTime = QDateTime::currentDateTime();
+        int timeDiff = lastSpeedMessageTime.msecsTo(currentTime);  // 计算与上次消息的时间差
+
+        if (timeDiff > 3000) {  // 超过3秒没有接收到消息
+            // 逐步将速度减小到0
+            currentValue = qMax(0.0f, currentValue - 1.0f);  // 慢慢减速
+            update();  // 更新界面
+        }
+    }
 }
 
 void SpeedMeterWidget::initCanvas(QPainter& painter)
 {
     painter.setRenderHint(QPainter::Antialiasing,true); // 启用抗锯齿
-    painter.setBrush(Qt::black); // 设置背景为黑色
+    QColor backgroundColor = palette().color(QPalette::Window);
+    painter.setBrush(backgroundColor);  // 设置为默认背景颜色
+    painter.setPen(Qt::NoPen);   // 移除边框
     painter.drawRect(rect());
     QPoint cent(rect().width()/2,rect().height()*0.6); // 设置中心点
     painter.translate(cent); // 平移到中心
@@ -52,7 +83,7 @@ void SpeedMeterWidget::initCanvas(QPainter& painter)
 
 void SpeedMeterWidget::drawMiddleCircle(QPainter &painter, int radius)
 {
-    painter.setPen(QPen(Qt::white,3)); // 设置画笔颜色和粗细
+    painter.setPen(QPen(Qt::black,3)); // 设置画笔颜色和粗细
     painter.drawEllipse(QPoint(0,0),radius,radius); // 绘制圆形
 }
 
@@ -62,18 +93,18 @@ void SpeedMeterWidget::drawCurrentSpeed(QPainter &painter)
     QFont font("Arial",30);
     font.setBold(true);
     painter.setFont(font);
-    painter.drawText(QRect(-60,-60,120,70),Qt::AlignCenter,QString::number(currentValue*4)); // 绘制当前速度
+    painter.drawText(QRect(-60,-60,120,70),Qt::AlignCenter,QString::number(currentValue)); // 绘制当前速度
     QFont font2("Arial",13);
     font.setBold(true);
     painter.setFont(font2);
-    painter.drawText(QRect(-60,-60,120,160),Qt::AlignCenter,"m/h"); // 绘制单位
+    painter.drawText(QRect(-60,-60,120,160),Qt::AlignCenter,"m/s"); // 绘制单位
 }
 
 void SpeedMeterWidget::drawScale(QPainter &painter,int radius)
 {
     angle = 240*1.0 / 60; // 计算每个刻度的角度
     painter.save();
-    painter.setPen(QPen(Qt::white,5)); // 设置刻度线颜色和粗细
+    painter.setPen(QPen(Qt::black,5)); // 设置刻度线颜色和粗细
     painter.rotate(startAngle); // 旋转到起始角度
     for(int i=0; i<=60; i++){
         if(i >= 40){
@@ -111,7 +142,7 @@ void SpeedMeterWidget::drawScaleText(QPainter &painter, int radius)
 void SpeedMeterWidget::drawPointLine(QPainter &painter,int lenth)
 {
     painter.save();
-    painter.setBrush(Qt::white);
+    painter.setBrush(Qt::black);
     painter.setPen(Qt::NoPen);
     static const QPointF points[4] = {
         QPointF(0,0),
@@ -183,17 +214,4 @@ void SpeedMeterWidget::paintEvent(QPaintEvent *event)
     drawCurrentSpeed(painter); // 绘制当前速度
     drawEllipseOutShine(painter,radius+25); // 绘制外圈渐变
     drawLogo(painter,radius); // 绘制 logo
-}
-
-// 定时器超时处理，刷新显示
-void SpeedMeterWidget::onTimeout()
-{
-    update();  // 每次超时调用 update 更新界面
-}
-
-// 示例：ROS速度回调函数
-void SpeedMeterWidget::speedCallback(const std_msgs::Float32::ConstPtr& msg)
-{
-    float speed = msg->data;
-    updateSpeed(speed);  // 更新速度
 }

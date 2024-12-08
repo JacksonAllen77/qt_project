@@ -6,6 +6,7 @@
 #include <QPainter>
 #include <ros/ros.h>
 #include <std_msgs/Float32.h>
+#include <QDateTime>
 
 class SpeedMeterWidget : public QWidget
 {
@@ -14,8 +15,7 @@ class SpeedMeterWidget : public QWidget
 public:
     explicit SpeedMeterWidget(QWidget *parent = nullptr);
     ~SpeedMeterWidget();
-
-    void updateSpeed(float speed); // 新增方法，用于更新速度
+    void updateSpeed(float speed); // 更新外部速度
 
 private:
     void startSpeed();
@@ -30,10 +30,12 @@ private:
     void drawEllipseInnerShine(QPainter &painter, int radius);
     void drawEllipseOutShine(QPainter &painter, int radius);
     void drawLogo(QPainter &painter, int radius);
-    void speedCallback(const std_msgs::Float32::ConstPtr& msg); // ROS速度回调函数
+
 
 private slots:
     void onTimeout();  // 定时器超时处理槽
+    void speedCallback(const std_msgs::Float32::ConstPtr& msg);  // ROS 速度回调函数
+
 
 protected:
     void paintEvent(QPaintEvent *event) override;
@@ -43,8 +45,14 @@ private:
     int angle;
     int mark;
     float currentValue;  // 修改为 float 类型，适应外部速度更新
+
     QTimer *timer;
+    ros::NodeHandle nh;             // ROS节点句柄
     ros::Subscriber speed_subscriber;  // ROS 订阅器
+    bool hasNewData; // 标志是否收到新角度数据
+
+    QDateTime lastSpeedMessageTime;  // 上次接收速度数据的时间
+    float currentSpeed;// 当前速度
 };
 
 #endif // SPEEDMETERWIDGET_H

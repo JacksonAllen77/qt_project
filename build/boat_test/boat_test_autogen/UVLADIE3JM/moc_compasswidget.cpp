@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_CompassWidget_t {
     QByteArrayData data[7];
-    char stringdata0[77];
+    char stringdata0[81];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -35,13 +35,14 @@ QT_MOC_LITERAL(0, 0, 13), // "CompassWidget"
 QT_MOC_LITERAL(1, 14, 9), // "onTimeout"
 QT_MOC_LITERAL(2, 24, 0), // ""
 QT_MOC_LITERAL(3, 25, 13), // "angleCallback"
-QT_MOC_LITERAL(4, 39, 27), // "std_msgs::Float32::ConstPtr"
-QT_MOC_LITERAL(5, 67, 3), // "msg"
-QT_MOC_LITERAL(6, 71, 5) // "angle"
+QT_MOC_LITERAL(4, 39, 31), // "geometry_msgs::Pose2D::ConstPtr"
+QT_MOC_LITERAL(5, 71, 3), // "msg"
+QT_MOC_LITERAL(6, 75, 5) // "angle"
 
     },
     "CompassWidget\0onTimeout\0\0angleCallback\0"
-    "std_msgs::Float32::ConstPtr\0msg\0angle"
+    "geometry_msgs::Pose2D::ConstPtr\0msg\0"
+    "angle"
 };
 #undef QT_MOC_LITERAL
 
@@ -79,7 +80,7 @@ void CompassWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->onTimeout(); break;
-        case 1: _t->angleCallback((*reinterpret_cast< const std_msgs::Float32::ConstPtr(*)>(_a[1]))); break;
+        case 1: _t->angleCallback((*reinterpret_cast< const geometry_msgs::Pose2D::ConstPtr(*)>(_a[1]))); break;
         default: ;
         }
     }
