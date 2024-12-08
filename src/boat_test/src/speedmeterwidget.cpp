@@ -42,7 +42,7 @@ SpeedMeterWidget::~SpeedMeterWidget()
 // 新增方法，用于更新外部传入的速度
 void SpeedMeterWidget::updateSpeed(float speed)
 {
-    currentValue = qMin(speed, 240.0f);  // 直接使用速度值，如果超过最大值则限制
+    currentValue = qMin(speed, 60.0f);  // 直接使用速度值，如果超过最大值则限制
     hasNewData = true;  // 设置标志为新数据
     lastSpeedMessageTime = QDateTime::currentDateTime();  // 更新接收到消息的时间
     update();  // 更新界面
@@ -102,7 +102,7 @@ void SpeedMeterWidget::drawCurrentSpeed(QPainter &painter)
 
 void SpeedMeterWidget::drawScale(QPainter &painter,int radius)
 {
-    angle = 240*1.0 / 60; // 计算每个刻度的角度
+    angle = 240 / 60; // 计算每个刻度的角度
     painter.save();
     painter.setPen(QPen(Qt::black,5)); // 设置刻度线颜色和粗细
     painter.rotate(startAngle); // 旋转到起始角度
@@ -133,7 +133,7 @@ void SpeedMeterWidget::drawScaleText(QPainter &painter, int radius)
             int delY = qSin(qDegreesToRadians(static_cast<double>(210 - angle * i))) * r;
             painter.translate(QPoint(delX,-delY));
             painter.rotate(-120 + angle * i);
-            painter.drawText(-25, -25, 50, 30, Qt::AlignCenter, QString::number(i * 4)); // 绘制刻度文字
+            painter.drawText(-25, -25, 50, 30, Qt::AlignCenter, QString::number(i)); // 绘制刻度文字
             painter.restore();
         }
     }

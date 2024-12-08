@@ -18,7 +18,7 @@ def publish_boat_data():
     longitude = 100.939631  # 经度
     latitude = 33.078577    # 纬度
     course = 0              # 艏向（以度为单位）
-    speed = 5.0             # 初始速度（单位：m/s）
+    speed = 3.0             # 初始速度（单位：m/s）
 
     while not rospy.is_shutdown():
         # 创建位置消息并赋值
