@@ -15,8 +15,8 @@ def publish_boat_data():
     rate = rospy.Rate(1)
 
     # 初始化经度、纬度、艏向和速度的初始值
-    longitude = 100.939631  # 经度
-    latitude = 33.078577    # 纬度
+    longitude = 119.37252879789787  # 经度
+    latitude = 32.119927693242424    # 纬度
     course = 0              # 艏向（以度为单位）
     speed = 3.0             # 初始速度（单位：m/s）
 
@@ -40,8 +40,8 @@ def publish_boat_data():
         speed_pub.publish(speed_msg)
 
         # 模拟船只位置和速度的变化
-        longitude += 0.01     # 经度增加
-        latitude += 0.01      # 纬度增加
+        longitude += 0.0001     # 经度增加
+        latitude += 0.0001      # 纬度增加
         course = round((course + 10) % 360, 2)  # 确保角度保持高精度
         speed += 0.1          # 速度增加
 

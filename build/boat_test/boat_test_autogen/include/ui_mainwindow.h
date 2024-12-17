@@ -77,6 +77,7 @@ public:
     QLabel *label_19;
     QPushButton *pushButton_10;
     QLineEdit *lineEdit;
+    QPushButton *pushButton_14;
     QGroupBox *groupBox;
     QGridLayout *gridLayout;
     QLabel *label_6;
@@ -389,6 +390,11 @@ public:
 
         gridLayout_2->addWidget(lineEdit, 2, 1, 1, 1);
 
+        pushButton_14 = new QPushButton(groupBox_2);
+        pushButton_14->setObjectName(QString::fromUtf8("pushButton_14"));
+
+        gridLayout_2->addWidget(pushButton_14, 0, 3, 1, 1);
+
 
         horizontalLayout_2->addWidget(groupBox_2);
 
@@ -525,6 +531,7 @@ public:
         pushButton_13->setText(QApplication::translate("MainWindow", "\345\233\236\346\224\276\350\275\250\350\277\271", nullptr));
         label_19->setText(QApplication::translate("MainWindow", "\345\210\266\345\257\274\345\217\202\346\225\260\357\274\232", nullptr));
         pushButton_10->setText(QApplication::translate("MainWindow", "\344\277\235\345\255\230\350\275\250\350\277\271", nullptr));
+        pushButton_14->setText(QApplication::translate("MainWindow", "\347\246\273\347\272\277\345\234\260\345\233\276", nullptr));
         groupBox->setTitle(QApplication::translate("MainWindow", "\347\212\266\346\200\201\350\256\276\347\275\256", nullptr));
         label_6->setText(QApplication::translate("MainWindow", "\350\211\217\345\220\221\357\274\232", nullptr));
         label_17->setText(QApplication::translate("MainWindow", "TextLabel", nullptr));

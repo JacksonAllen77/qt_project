@@ -334,3 +334,9 @@ void MainWindow::SpeedCallback(const std_msgs::Float32::ConstPtr& msg)
         speedMeterWidget->updateSpeed(msg->data); // 使用 ROS 接收到的速度更新仪表盘
     }
 }
+
+void MainWindow::on_pushButton_14_clicked()
+{
+
+}
+

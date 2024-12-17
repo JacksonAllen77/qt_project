@@ -30,13 +30,93 @@
     <script type="text/javascript">
         // 创建地图实例
         var map = new BMap.Map("container");  
-        map.centerAndZoom(new BMap.Point(119.939631, 32.078577), 5);  // 初始化地图，设置中心点坐标和地图级别
+        map.centerAndZoom(new BMap.Point(119.37252879789787, 32.119927693242424), 18);  // 初始化地图，设置中心点坐标和地图级别
         map.enableScrollWheelZoom(); // 开启滚轮缩放
         map.disableDoubleClickZoom();
         map.addControl(new BMap.NavigationControl({ type: BMAP_NAVIGATION_CONTROL_LARGE, showZoomInfo: true }));
         map.addControl(new BMap.MapTypeControl({ mapTypes: [BMAP_NORMAL_MAP, BMAP_HYBRID_MAP], anchor: BMAP_ANCHOR_TOP_LEFT, offset: new BMap.Size(80, 50) }));
         map.addControl(new BMap.ScaleControl({ anchor: BMAP_ANCHOR_TOP_LEFT }));
 
+        // 判断是否在线
+        var isOnline = navigator.onLine;
+
+        if (isOnline) {
+            console.log("在线状态：加载在线地图");
+            // 使用百度在线地图
+            map.setMapType(BMAP_NORMAL_MAP); // 设置普通地图
+        } else {
+            console.log("离线状态：加载离线地图");
+            // 设置离线瓦片路径（通过本地 HTTP 服务器访问）
+            var tileLayer = new BMap.TileLayer();
+            tileLayer.getTilesUrl = function(tileCoord, zoom) {
+                var x = tileCoord.x;
+                var y = tileCoord.y;
+                return "http://localhost:8080/" + x + "/" + y + ".jpg"; // 离线瓦片路径
+            };
+            map.addTileLayer(tileLayer);
+        }
+
+                // 自定义轨迹绘制
+        function drawTrackFromCSV(trackData) {
+            var points = [];
+            trackData.forEach(function(point) {
+                var lat = point.lat;
+                var lng = point.lng;
+                points.push(new BMap.Point(lng, lat));
+            });
+
+            var trackPolyline = new BMap.Polyline(points, { 
+                strokeColor: "blue", 
+                strokeWeight: 3, 
+                strokeOpacity: 0.7 
+            });
+            map.addOverlay(trackPolyline);
+        }
+
+        // 使用离线文件播放轨迹
+        function replayOfflineTrack(fileData) {
+            // 读取CSV文件，解析并绘制轨迹
+            var trackData = parseCSV(fileData);  // 解析CSV数据
+            drawTrackFromCSV(trackData);  // 绘制轨迹
+        }
+
+        function parseCSV(data) {
+            var lines = data.split("\n");
+            var trackData = [];
+            for (var i = 1; i < lines.length; i++) {
+                var parts = lines[i].split(",");
+                if (parts.length >= 2) {
+                    var lng = parseFloat(parts[0]);
+                    var lat = parseFloat(parts[1]);
+                    trackData.push({ lng: lng, lat: lat });
+                }
+            }
+            return trackData;
+        }
+
+        // 在离线模式下启用绘制工具
+        var drawingManagerOffline = new BMapLib.DrawingManager(map, {
+            isOpen: false, // 不自动打开
+            enableDrawingTool: true, // 开启绘制工具
+            drawingToolOptions: {
+                anchor: BMAP_ANCHOR_TOP_RIGHT,  // 工具栏位置
+                offset: new BMap.Size(5, 5)  // 偏移量
+            },
+            circleOptions: { strokeColor: "red", fillColor: "red", strokeWeight: 2, strokeOpacity: 0.8, fillOpacity: 0.2 },
+            polylineOptions: { strokeColor: "red", strokeWeight: 2, strokeOpacity: 0.5, strokeStyle: "dashed" }
+        });
+        
+        // 开启绘制工具
+        function toggleDrawingTool() {
+            if (isOnline) {
+                drawingManagerOffline.open();
+            } else {
+                // 离线状态下使用自定义绘制
+                console.log("离线状态，启用自定义绘制工具");
+                drawingManagerOffline.open(); // 确保在离线模式下也能开启绘制工具
+            }
+        }
+        
         // 定义航点和轨迹
         var wayPoints = [];
         var wayPointsPolyline = new BMap.Polyline([], { strokeColor: "red", strokeWeight: 2, strokeOpacity: 0.5, strokeStyle: "dashed" });

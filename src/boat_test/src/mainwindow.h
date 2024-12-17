@@ -34,6 +34,8 @@ private slots:
 
     void on_pushButton_13_clicked();
 
+    void on_pushButton_14_clicked();
+
 private:
     Ui::MainWindow *ui;
     mapchannel *m; // 实时地图窗口
