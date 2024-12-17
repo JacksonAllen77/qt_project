@@ -767,9 +767,11 @@ boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu
 boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QList
 boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QMetaType
 boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject
+boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QProcess
 boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QSharedDataPointer
 boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
 boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QTextStream
+boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QThread
 boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QUrl
 boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant
 boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QVector
@@ -824,6 +826,7 @@ boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu
 boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qobjectdefs_impl.h
 boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qpair.h
 boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qpoint.h
+boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocess.h
 boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocessordetection.h
 boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qrect.h
 boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qrefcount.h
@@ -845,6 +848,7 @@ boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu
 boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h
 boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qtcore-config.h
 boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qtextstream.h
+boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qthread.h
 boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h
 boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h
 boat_test/CMakeFiles/boat_test.dir/src/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qurlquery.h
